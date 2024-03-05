@@ -1,0 +1,203 @@
+.comment-window {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .comment-window .overlap-group-wrapper {
+    width: 922.41px;
+    height: 609.93px;
+  }
+  
+  .comment-window .overlap-group {
+    position: relative;
+    width: 922px;
+    height: 610px;
+  }
+  
+  .comment-window .shadow {
+    position: absolute;
+    width: 908px;
+    height: 593px;
+    top: 17px;
+    left: 14px;
+    background-color: #302f2f;
+    border-radius: 57.2px;
+  }
+  
+  .comment-window .coment-frame {
+    position: absolute;
+    width: 908px;
+    height: 593px;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    border-radius: 57.2px;
+  }
+  
+  .comment-window .share-your-thought {
+    position: absolute;
+    width: 365px;
+    top: 36px;
+    left: 272px;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #00000080;
+    font-size: 21.5px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 42.2px;
+    white-space: nowrap;
+  }
+  
+  .comment-window .leave-a-comment {
+    position: absolute;
+    width: 365px;
+    top: 177px;
+    left: 272px;
+    font-family: "Roboto-ExtraBold", Helvetica;
+    font-weight: 800;
+    color: #00000080;
+    font-size: 17.9px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 42.2px;
+    white-space: nowrap;
+  }
+  
+  .comment-window .comment-input {
+    position: absolute;
+    width: 840px;
+    height: 257px;
+    top: 212px;
+    left: 34px;
+    background-color: #d9d9d9;
+    border-radius: 72.1px;
+    overflow: hidden;
+    border: 2.15px solid;
+    border-color: #000000;
+    overflow-y: scroll;
+  }
+  
+  .comment-window .lorem-ipsum-dolor {
+    position: absolute;
+    width: 778px;
+    top: 18px;
+    left: 33px;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 17.9px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 42.2px;
+  }
+  
+  .comment-window .comment {
+    position: absolute;
+    width: 113px;
+    height: 112px;
+    top: 1px;
+    left: 777px;
+  }
+  
+  .comment-window .comment-2 {
+    position: absolute;
+    width: 115px;
+    height: 118px;
+    top: 474px;
+    left: 34px;
+  }
+  
+  .comment-window .comment-3 {
+    position: absolute;
+    width: 117px;
+    height: 107px;
+    top: 9px;
+    left: 14px;
+  }
+  
+  .comment-window .comment-4 {
+    position: absolute;
+    width: 118px;
+    height: 112px;
+    top: 475px;
+    left: 764px;
+  }
+  
+  .comment-window .star-rating {
+    position: absolute;
+    width: 379px;
+    height: 49px;
+    top: 91px;
+    left: 280px;
+  }
+  
+  .comment-window .text-wrapper {
+    position: absolute;
+    width: 52px;
+    top: 9px;
+    left: 251px;
+    font-family: "Roboto-ExtraBold", Helvetica;
+    font-weight: 800;
+    color: #000000;
+    font-size: 12.8px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 30.2px;
+    white-space: nowrap;
+  }
+  
+  .comment-window .frame {
+    display: inline-flex;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .comment-window .star {
+    position: relative;
+    width: 35.83px;
+    height: 34.73px;
+  }
+  
+  .comment-window .star-2 {
+    position: absolute;
+    width: 30px;
+    height: 28px;
+    top: 2px;
+    left: 3px;
+  }
+  
+  .comment-window .submit-button {
+    all: unset;
+    box-sizing: border-box;
+    position: absolute;
+    width: 280px;
+    height: 70px;
+    top: 499px;
+    left: 315px;
+    background-color: #000000;
+    border-radius: 34.95px;
+    border: 3.58px solid;
+    border-color: #b19ba8;
+  }
+  
+  .comment-window .div {
+    position: absolute;
+    width: 222px;
+    height: 29px;
+    top: 16px;
+    left: 26px;
+    font-family: "Roboto-ExtraBold", Helvetica;
+    font-weight: 800;
+    color: #b19ba8;
+    font-size: 24.5px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
