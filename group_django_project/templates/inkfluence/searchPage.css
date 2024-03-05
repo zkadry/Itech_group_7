@@ -1,0 +1,249 @@
+.home-page {
+    background-color: #e2e2e2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .home-page .overlap-wrapper {
+    background-color: #e2e2e2;
+    width: 1440px;
+    height: 1111px;
+  }
+  
+  .home-page .overlap {
+    position: relative;
+    height: 1111px;
+    background-image: url(./static/img/ink-fluence.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+  .home-page .overlap-group {
+    position: absolute;
+    width: 1119px;
+    height: 820px;
+    top: 215px;
+    left: 160px;
+  }
+  
+  .home-page .genre-shadow {
+    position: absolute;
+    width: 1104px;
+    height: 793px;
+    top: 27px;
+    left: 15px;
+    background-color: #00000080;
+    border-radius: 20px;
+    border: 1px solid;
+    border-color: #0000001a;
+  }
+  
+  .home-page .most-popular-frame {
+    position: absolute;
+    width: 1104px;
+    height: 793px;
+    top: 0;
+    left: 0;
+    background-color: #b19ba8;
+    border-radius: 20px;
+    border: 1px solid;
+    border-color: #0000001a;
+  }
+  
+  .home-page .div {
+    position: absolute;
+    width: 1052px;
+    height: 68px;
+    top: 129px;
+    left: 197px;
+  }
+  
+  .home-page .search-bar-shadow {
+    position: absolute;
+    width: 1047px;
+    height: 60px;
+    top: 8px;
+    left: 5px;
+    background-color: #00000080;
+    border-radius: 32px;
+    box-shadow: var(--shadow-3);
+  }
+  
+  .home-page .search-bar {
+    display: flex;
+    width: 1047px;
+    height: 60px;
+    align-items: center;
+    gap: 6px;
+    padding: 0px 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--whitewhite);
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow: var(--shadow-3);
+  }
+  
+  .home-page .search {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    background-image: url(./static/img/search.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+  .home-page .search-input {
+    position: relative;
+    flex-grow: 1;
+    border: none;
+    background: none;
+    margin-top: -1px;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: var(--gray);
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    padding: 0;
+  }
+  
+  .home-page .filter {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    background-image: url(./static/img/filter.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+  .home-page .naviation-bar {
+    position: absolute;
+    width: 1440px;
+    height: 64px;
+    top: 0;
+    left: 0;
+    background-color: #b19ba8;
+  }
+  
+  .home-page .links {
+    position: absolute;
+    width: 266px;
+    height: 22px;
+    top: 21px;
+    left: 40px;
+  }
+  
+  .home-page .link {
+    position: absolute;
+    height: 22px;
+    top: 0;
+    left: 0;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper {
+    left: 80px;
+    position: absolute;
+    height: 22px;
+    top: 0;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .link-2 {
+    left: 173px;
+    position: absolute;
+    height: 22px;
+    top: 0;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .logo {
+    position: absolute;
+    top: 15px;
+    left: 655px;
+    font-family: "Yusei Magic-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .profile-button {
+    position: absolute;
+    width: 140px;
+    height: 40px;
+    top: 12px;
+    left: 1260px;
+  }
+  
+  .home-page .overlap-group-2 {
+    position: relative;
+    width: 146px;
+    height: 48px;
+    top: -2px;
+  }
+  
+  .home-page .background {
+    position: absolute;
+    width: 140px;
+    height: 40px;
+    top: 8px;
+    left: 6px;
+    background-color: #000000;
+    border-radius: 5px;
+  }
+  
+  .home-page .background-2 {
+    position: absolute;
+    width: 140px;
+    height: 40px;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    border-radius: 5px;
+  }
+  
+  .home-page .text {
+    position: absolute;
+    width: 91px;
+    height: 17px;
+    top: 13px;
+    left: 35px;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    color: #b19ba8;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .profile {
+    position: absolute;
+    width: 43px;
+    height: 36px;
+    top: 2px;
+    left: 10px;
+  }
+  
