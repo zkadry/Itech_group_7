@@ -3,4 +3,8 @@
     --whitewhite: rgba(255, 255, 255, 1);
     --shadow-3: 0px 4px 12px 0px rgba(13, 10, 44, 0.06);
   }
+
+  :root {
+    --gray: rgba(171, 183, 194, 1);
+  }
   

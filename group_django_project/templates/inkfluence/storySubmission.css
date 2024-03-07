@@ -9,31 +9,38 @@
 .submission-page .overlap-wrapper {
   background-color: #e2e2e2;
   width: 1440px;
-  height: 1024px;
+  height: 2410px;
 }
 
 .submission-page .overlap {
   position: relative;
-  height: 1024px;
-  background-image: url(./static/img/inkFluence.png);
-  background-size: cover;
-  background-position: 50% 50%;
+  height: 2410px;
 }
 
-.submission-page .overlap-group {
+.submission-page .ink-fluence {
   position: absolute;
-  width: 1290px;
-  height: 895px;
-  top: 107px;
-  left: 85px;
+  width: 1440px;
+  height: 1199px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.submission-page .img {
+  position: absolute;
+  width: 1440px;
+  height: 1164px;
+  top: 1246px;
+  left: 0;
+  object-fit: cover;
 }
 
 .submission-page .shadow {
   position: absolute;
   width: 1270px;
-  height: 871px;
-  top: 24px;
-  left: 20px;
+  height: 2199px;
+  top: 131px;
+  left: 105px;
   background-color: #302f2f;
   border-radius: 80px;
 }
@@ -41,9 +48,9 @@
 .submission-page .submission-frame {
   position: absolute;
   width: 1270px;
-  height: 874px;
-  top: 0;
-  left: 0;
+  height: 2198px;
+  top: 107px;
+  left: 85px;
   background-color: #ffffff;
   border-radius: 80px;
   overflow: hidden;
@@ -54,16 +61,16 @@
   position: absolute;
   width: 85px;
   height: 71px;
-  top: 1230px;
-  left: 834px;
+  top: 2111px;
+  left: 837px;
 }
 
-.submission-page .img {
+.submission-page .pen-2 {
   position: absolute;
   width: 67px;
   height: 84px;
-  top: 1233px;
-  left: 347px;
+  top: 2114px;
+  left: 350px;
 }
 
 .submission-page .submit-button {
@@ -72,8 +79,8 @@
   position: absolute;
   width: 391px;
   height: 71px;
-  top: 1217px;
-  left: 439px;
+  top: 2098px;
+  left: 442px;
   background-color: #000000;
   border-radius: 48.88px;
   border: 5px solid;
@@ -99,7 +106,7 @@
 .submission-page .story-submission {
   position: absolute;
   width: 1175px;
-  height: 387px;
+  height: 1231px;
   top: 807px;
   left: 45px;
   background-color: #d9d9d9;
@@ -110,18 +117,27 @@
   overflow-y: scroll;
 }
 
-.submission-page .lorem-ipsum-dolor {
-  position: absolute;
-  width: 1033px;
-  top: 18px;
-  left: 72px;
-  font-family: "Roboto-Regular", Helvetica;
+.submission-page .submission {
+  display: flex;
+  width: 1028px;
+  align-items: center;
+  position: relative;
+  top: 33px;
+  left: 73px;
+}
+
+.submission-page .submission-input {
+  position: relative;
+  width: 1028px;
+  height: 3222px;
+  margin-top: -1px;
+  font-family: "Poppins-Regular", Helvetica;
   font-weight: 400;
-  color: #000000;
-  font-size: 25px;
+  color: var(--gray);
+  font-size: 24px;
   text-align: center;
   letter-spacing: 0;
-  line-height: 59.1px;
+  line-height: normal;
 }
 
 .submission-page .div {
@@ -153,18 +169,27 @@
   overflow-y: scroll;
 }
 
-.submission-page .story-summary-input {
-  position: absolute;
-  width: 1055px;
-  top: 8px;
-  left: 60px;
-  font-family: "Roboto-Regular", Helvetica;
+.submission-page .summary {
+  display: flex;
+  width: 1028px;
+  align-items: center;
+  position: relative;
+  top: 19px;
+  left: 74px;
+}
+
+.submission-page .summary-input {
+  position: relative;
+  width: 1028px;
+  height: 321px;
+  margin-top: -1px;
+  font-family: "Poppins-Regular", Helvetica;
   font-weight: 400;
-  color: #000000;
-  font-size: 25px;
+  color: var(--gray);
+  font-size: 24px;
   text-align: center;
   letter-spacing: 0;
-  line-height: 59.1px;
+  line-height: normal;
 }
 
 .submission-page .story-summary {
@@ -182,7 +207,7 @@
   white-space: nowrap;
 }
 
-.submission-page .genre-tags-input {
+.submission-page .overlap-group {
   position: absolute;
   width: 1181px;
   height: 63px;
@@ -194,7 +219,30 @@
   border-color: #000000;
 }
 
+.submission-page .div-wrapper {
+  display: flex;
+  width: 1078px;
+  height: 42px;
+  align-items: center;
+  position: relative;
+  top: 7px;
+  left: 49px;
+}
+
 .submission-page .text-wrapper-2 {
+  position: relative;
+  width: 1078px;
+  height: 35px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--gray);
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.submission-page .text-wrapper-3 {
   position: absolute;
   width: 511px;
   top: 302px;
@@ -209,7 +257,7 @@
   white-space: nowrap;
 }
 
-.submission-page .tile-input {
+.submission-page .title-wrapper {
   position: absolute;
   width: 1181px;
   height: 63px;
@@ -236,7 +284,7 @@
   white-space: nowrap;
 }
 
-.submission-page .overlap-group-2 {
+.submission-page .overlap-2 {
   position: absolute;
   width: 946px;
   height: 111px;
@@ -258,7 +306,7 @@
   line-height: 59.1px;
 }
 
-.submission-page .text-wrapper-3 {
+.submission-page .text-wrapper-4 {
   position: absolute;
   width: 934px;
   top: 0;
@@ -284,7 +332,7 @@
 
 .submission-page .links {
   position: absolute;
-  width: 266px;
+  width: 51px;
   height: 22px;
   top: 21px;
   left: 40px;
@@ -295,32 +343,6 @@
   height: 22px;
   top: 0;
   left: 0;
-  font-family: "Roboto-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 18px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.submission-page .link-2 {
-  left: 80px;
-  position: absolute;
-  height: 22px;
-  top: 0;
-  font-family: "Roboto-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 18px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.submission-page .link-3 {
-  left: 173px;
-  position: absolute;
-  height: 22px;
-  top: 0;
   font-family: "Roboto-Regular", Helvetica;
   font-weight: 400;
   color: #000000;
@@ -342,19 +364,12 @@
   line-height: normal;
 }
 
-.submission-page .profile-button {
+.submission-page .overlap-3 {
   position: absolute;
-  width: 140px;
-  height: 40px;
-  top: 12px;
-  left: 1260px;
-}
-
-.submission-page .overlap-group-3 {
-  position: relative;
   width: 146px;
   height: 48px;
-  top: -2px;
+  top: 10px;
+  left: 1260px;
 }
 
 .submission-page .background {
@@ -367,7 +382,7 @@
   border-radius: 5px;
 }
 
-.submission-page .background-2 {
+.submission-page .profile-button {
   position: absolute;
   width: 140px;
   height: 40px;
@@ -377,27 +392,17 @@
   border-radius: 5px;
 }
 
-.submission-page .text {
+.submission-page .text-wrapper-5 {
   position: absolute;
-  width: 91px;
-  height: 17px;
-  top: 13px;
-  left: 35px;
+  width: 107px;
+  height: 25px;
+  top: 8px;
+  left: 17px;
   font-family: "Roboto-Regular", Helvetica;
   font-weight: 400;
   color: #b19ba8;
-  font-size: 14px;
+  font-size: 18px;
   text-align: center;
   letter-spacing: 0;
-  line-height: normal;
+  line-height: 24.3px;
 }
-
-.submission-page .profile {
-  position: absolute;
-  width: 43px;
-  height: 36px;
-  top: 2px;
-  left: 10px;
-}
-
-  

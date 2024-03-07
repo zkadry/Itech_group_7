@@ -1,337 +1,342 @@
 .profile-reader {
-    background-color: #e2e2e2;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-  }
-  
-  .profile-reader .overlap-wrapper {
-    background-color: #e2e2e2;
-    width: 1440px;
-    height: 1024px;
-  }
-  
-  .profile-reader .overlap {
-    position: relative;
-    height: 948px;
-  }
-  
-  .profile-reader .overlap-group {
-    position: absolute;
-    width: 1440px;
-    height: 948px;
-    top: 0;
-    left: 0;
-  }
-  
-  .profile-reader .div {
-    position: absolute;
-    width: 1440px;
-    height: 533px;
-    top: 0;
-    left: 0;
-  }
-  
-  .profile-reader .ink-fluence {
-    position: absolute;
-    width: 1440px;
-    height: 394px;
-    top: 0;
-    left: 0;
-  }
-  
-  .profile-reader .line {
-    position: absolute;
-    width: 1440px;
-    height: 8px;
-    top: 391px;
-    left: 0;
-  }
-  
-  .profile-reader .profile-picture {
-    position: absolute;
-    width: 288px;
-    height: 288px;
-    top: 245px;
-    left: 112px;
-    background-color: #b9b9b9;
-    border-radius: 30px;
-    border: 3px solid;
-    border-color: #b19ba8;
-  }
-  
-  .profile-reader .naviation-bar {
-    position: absolute;
-    width: 1440px;
-    height: 64px;
-    top: 0;
-    left: 0;
-    background-color: #b19ba8;
-  }
-  
-  .profile-reader .links {
-    position: absolute;
-    width: 266px;
-    height: 22px;
-    top: 21px;
-    left: 40px;
-  }
-  
-  .profile-reader .link {
-    position: absolute;
-    height: 22px;
-    top: 0;
-    left: 0;
-    font-family: "Roboto-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 18px;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .profile-reader .text-wrapper {
-    left: 80px;
-    position: absolute;
-    height: 22px;
-    top: 0;
-    font-family: "Roboto-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 18px;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .profile-reader .link-2 {
-    left: 173px;
-    position: absolute;
-    height: 22px;
-    top: 0;
-    font-family: "Roboto-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 18px;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .profile-reader .logo {
-    position: absolute;
-    top: 15px;
-    left: 655px;
-    font-family: "Yusei Magic-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 24px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .profile-reader .profile-button {
-    position: absolute;
-    width: 140px;
-    height: 40px;
-    top: 12px;
-    left: 1260px;
-  }
-  
-  .profile-reader .overlap-group-2 {
-    position: relative;
-    width: 146px;
-    height: 48px;
-    top: -2px;
-  }
-  
-  .profile-reader .background {
-    position: absolute;
-    width: 140px;
-    height: 40px;
-    top: 8px;
-    left: 6px;
-    background-color: #000000;
-    border-radius: 5px;
-  }
-  
-  .profile-reader .background-2 {
-    position: absolute;
-    width: 140px;
-    height: 40px;
-    top: 0;
-    left: 0;
-    background-color: #ffffff;
-    border-radius: 5px;
-  }
-  
-  .profile-reader .text {
-    position: absolute;
-    width: 91px;
-    height: 17px;
-    top: 13px;
-    left: 35px;
-    font-family: "Roboto-Regular", Helvetica;
-    font-weight: 400;
-    color: #b19ba8;
-    font-size: 14px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .profile-reader .profile {
-    position: absolute;
-    width: 43px;
-    height: 36px;
-    top: 2px;
-    left: 10px;
-  }
-  
-  .profile-reader .favourite-genres {
-    position: absolute;
-    width: 294px;
-    height: 523px;
-    top: 425px;
-    left: 1092px;
-    background-color: #ffffff;
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid;
-    border-color: #0000001a;
-  }
-  
-  .profile-reader .fantasy-romance {
-    position: absolute;
-    width: 295px;
-    top: 150px;
-    left: -1px;
-    font-family: "Roboto-ExtraBold", Helvetica;
-    font-weight: 800;
-    color: #000000;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .profile-reader .text-wrapper-2 {
-    position: absolute;
-    width: 196px;
-    top: 36px;
-    left: 49px;
-    font-family: "Roboto-ExtraBold", Helvetica;
-    font-weight: 800;
-    color: #000000;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .profile-reader .favourite-works {
-    position: absolute;
-    width: 521px;
-    height: 523px;
-    top: 425px;
-    left: 509px;
-    background-color: #ffffff;
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid;
-    border-color: #0000001a;
-  }
-  
-  .profile-reader .text-wrapper-3 {
-    position: absolute;
-    width: 196px;
-    top: 34px;
-    left: 163px;
-    font-family: "Roboto-ExtraBold", Helvetica;
-    font-weight: 800;
-    color: #000000;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .profile-reader .dreaming-of-electric {
-    position: absolute;
-    width: 295px;
-    top: 121px;
-    left: 113px;
-    font-family: "Roboto-ExtraBold", Helvetica;
-    font-weight: 800;
-    color: #000000;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .profile-reader .about {
-    position: absolute;
-    width: 361px;
-    height: 396px;
-    top: 552px;
-    left: 76px;
-    background-color: #ffffff;
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid;
-    border-color: #0000001a;
-  }
-  
-  .profile-reader .text-wrapper-4 {
-    position: absolute;
-    width: 74px;
-    top: 23px;
-    left: 33px;
-    font-family: "Roboto-ExtraBold", Helvetica;
-    font-weight: 800;
-    color: #000000;
-    font-size: 20px;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .profile-reader .text-wrapper-5 {
-    position: absolute;
-    width: 282px;
-    top: 67px;
-    left: 33px;
-    font-family: "Roboto-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 17.9px;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .profile-reader .text-wrapper-6 {
-    position: absolute;
-    top: 122px;
-    left: 33px;
-    font-family: "Roboto-ExtraBold", Helvetica;
-    font-weight: 800;
-    color: #000000;
-    font-size: 20px;
-    letter-spacing: 0;
-    line-height: normal;
-    white-space: nowrap;
-  }
-  
-  .profile-reader .in-west-philadelphia {
-    position: absolute;
-    width: 296px;
-    top: 153px;
-    left: 33px;
-    font-family: "Roboto-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 17.9px;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
+  background-color: #e2e2e2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.profile-reader .overlap-wrapper {
+  background-color: #e2e2e2;
+  overflow: hidden;
+  width: 1440px;
+  height: 1024px;
+}
+
+.profile-reader .overlap {
+  position: relative;
+  width: 1493px;
+  height: 1046px;
+  left: -26px;
+}
+
+.profile-reader .ink-fluence {
+  position: absolute;
+  width: 1440px;
+  height: 394px;
+  top: 0;
+  left: 26px;
+}
+
+.profile-reader .frame {
+  position: absolute;
+  width: 1493px;
+  height: 652px;
+  top: 394px;
+  left: 0;
+  background-color: #d9d9d9;
+  border-radius: 2px;
+  border: 3px solid;
+  border-color: #b19ba8;
+}
+
+.profile-reader .favourite-genres {
+  position: absolute;
+  width: 294px;
+  height: 523px;
+  top: 425px;
+  left: 1118px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #0000001a;
+}
+
+.profile-reader .genres {
+  display: inline-flex;
+  height: 395px;
+  align-items: center;
+  position: absolute;
+  top: 91px;
+  left: 22px;
+}
+
+.profile-reader .genres-input {
+  position: relative;
+  width: 252px;
+  height: 394px;
+  margin-top: -0.5px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--gray);
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.profile-reader .text-wrapper {
+  position: absolute;
+  width: 196px;
+  top: 36px;
+  left: 49px;
+  font-family: "Roboto-ExtraBold", Helvetica;
+  font-weight: 800;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.profile-reader .favourite-works {
+  position: absolute;
+  width: 521px;
+  height: 523px;
+  top: 425px;
+  left: 535px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #0000001a;
+}
+
+.profile-reader .div {
+  position: absolute;
+  width: 196px;
+  top: 34px;
+  left: 163px;
+  font-family: "Roboto-ExtraBold", Helvetica;
+  font-weight: 800;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.profile-reader .dreaming-of-electric {
+  position: absolute;
+  width: 295px;
+  top: 121px;
+  left: 113px;
+  font-family: "Roboto-ExtraBold", Helvetica;
+  font-weight: 800;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.profile-reader .profile-picture {
+  position: absolute;
+  width: 288px;
+  height: 288px;
+  top: 245px;
+  left: 138px;
+  background-color: #b9b9b9;
+  border-radius: 30px;
+  border: 3px solid;
+  border-color: #b19ba8;
+}
+
+.profile-reader .about {
+  position: absolute;
+  width: 361px;
+  height: 411px;
+  top: 565px;
+  left: 102px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #0000001a;
+}
+
+.profile-reader .bio {
+  display: flex;
+  width: 289px;
+  height: 48px;
+  align-items: center;
+  position: absolute;
+  top: 56px;
+  left: 33px;
+}
+
+.profile-reader .bio-input {
+  position: relative;
+  width: 331px;
+  height: 38px;
+  margin-right: -42px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--gray);
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.profile-reader .text-wrapper-2 {
+  position: absolute;
+  top: 122px;
+  left: 33px;
+  font-family: "Roboto-ExtraBold", Helvetica;
+  font-weight: 800;
+  color: #000000;
+  font-size: 20px;
+  white-space: nowrap;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.profile-reader .name {
+  display: flex;
+  width: 289px;
+  height: 232px;
+  align-items: center;
+  position: absolute;
+  top: 165px;
+  left: 33px;
+}
+
+.profile-reader .name-input {
+  position: relative;
+  width: 289px;
+  height: 232px;
+  margin-top: -1px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--gray);
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.profile-reader .text-wrapper-3 {
+  position: absolute;
+  width: 74px;
+  top: 23px;
+  left: 33px;
+  font-family: "Roboto-ExtraBold", Helvetica;
+  font-weight: 800;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.profile-reader .naviation-bar {
+  position: absolute;
+  width: 1440px;
+  height: 64px;
+  top: 0;
+  left: 26px;
+  background-color: #b19ba8;
+}
+
+.profile-reader .links {
+  position: absolute;
+  width: 51px;
+  height: 22px;
+  top: 21px;
+  left: 40px;
+}
+
+.profile-reader .link {
+  position: absolute;
+  height: 22px;
+  top: 0;
+  left: 0;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.profile-reader .logo {
+  position: absolute;
+  top: 15px;
+  left: 655px;
+  font-family: "Yusei Magic-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.profile-reader .overlap-group {
+  position: absolute;
+  width: 146px;
+  height: 48px;
+  top: 10px;
+  left: 1260px;
+}
+
+.profile-reader .background {
+  position: absolute;
+  width: 140px;
+  height: 40px;
+  top: 8px;
+  left: 6px;
+  background-color: #000000;
+  border-radius: 5px;
+}
+
+.profile-reader .profile-button {
+  position: absolute;
+  width: 140px;
+  height: 40px;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.profile-reader .text-wrapper-4 {
+  position: absolute;
+  width: 107px;
+  height: 25px;
+  top: 8px;
+  left: 17px;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #b19ba8;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 24.3px;
+}
+
+.profile-reader .edit-button {
+  all: unset;
+  box-sizing: border-box;
+  position: absolute;
+  width: 82px;
+  height: 31px;
+  top: 91px;
+  left: 1315px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.profile-reader .text-wrapper-5 {
+  position: absolute;
+  width: 49px;
+  height: 19px;
+  top: 7px;
+  left: 17px;
+  font-family: "Roboto-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #b19ba8;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 18.9px;
+}

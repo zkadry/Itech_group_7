@@ -1,378 +1,374 @@
 .profile-author {
-    background-color: #e2e2e2;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-  }
-  
-  .profile-author .overlap-wrapper {
-    background-color: #e2e2e2;
-    width: 1440px;
-    height: 1024px;
-  }
-  
-  .profile-author .overlap {
-    position: relative;
-    height: 949px;
-  }
-  
-  .profile-author .overlap-group {
-    position: absolute;
-    width: 1440px;
-    height: 948px;
-    top: 0;
-    left: 0;
-  }
-  
-  .profile-author .div {
-    position: absolute;
-    width: 1440px;
-    height: 528px;
-    top: 0;
-    left: 0;
-  }
-  
-  .profile-author .ink-fluence {
-    position: absolute;
-    width: 1440px;
-    height: 394px;
-    top: 0;
-    left: 0;
-  }
-  
-  .profile-author .line {
-    position: absolute;
-    width: 1440px;
-    height: 8px;
-    top: 391px;
-    left: 0;
-  }
-  
-  .profile-author .profile-picture {
-    position: absolute;
-    width: 288px;
-    height: 288px;
-    top: 240px;
-    left: 576px;
-    background-color: #b9b9b9;
-    border-radius: 30px;
-    border: 3px solid;
-    border-color: #b19ba8;
-  }
-  
-  .profile-author .naviation-bar {
-    position: absolute;
-    width: 1440px;
-    height: 64px;
-    top: 0;
-    left: 0;
-    background-color: #b19ba8;
-  }
-  
-  .profile-author .links {
-    position: absolute;
-    width: 266px;
-    height: 22px;
-    top: 21px;
-    left: 40px;
-  }
-  
-  .profile-author .link {
-    position: absolute;
-    height: 22px;
-    top: 0;
-    left: 0;
-    font-family: "Roboto-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 18px;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .profile-author .text-wrapper {
-    left: 80px;
-    position: absolute;
-    height: 22px;
-    top: 0;
-    font-family: "Roboto-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 18px;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .profile-author .link-2 {
-    left: 173px;
-    position: absolute;
-    height: 22px;
-    top: 0;
-    font-family: "Roboto-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 18px;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .profile-author .logo {
-    position: absolute;
-    top: 15px;
-    left: 655px;
-    font-family: "Yusei Magic-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 24px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .profile-author .profile-button {
-    position: absolute;
-    width: 140px;
-    height: 40px;
-    top: 12px;
-    left: 1260px;
-  }
-  
-  .profile-author .overlap-group-2 {
-    position: relative;
-    width: 146px;
-    height: 48px;
-    top: -2px;
-  }
-  
-  .profile-author .background {
-    position: absolute;
-    width: 140px;
-    height: 40px;
-    top: 8px;
-    left: 6px;
-    background-color: #000000;
-    border-radius: 5px;
-  }
-  
-  .profile-author .background-2 {
-    position: absolute;
-    width: 140px;
-    height: 40px;
-    top: 0;
-    left: 0;
-    background-color: #ffffff;
-    border-radius: 5px;
-  }
-  
-  .profile-author .text {
-    position: absolute;
-    width: 91px;
-    height: 17px;
-    top: 13px;
-    left: 35px;
-    font-family: "Roboto-Regular", Helvetica;
-    font-weight: 400;
-    color: #b19ba8;
-    font-size: 14px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .profile-author .profile {
-    position: absolute;
-    width: 43px;
-    height: 36px;
-    top: 2px;
-    left: 10px;
-  }
-  
-  .profile-author .written-works {
-    position: absolute;
-    width: 361px;
-    height: 494px;
-    top: 454px;
-    left: 969px;
-    background-color: #ffffff;
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid;
-    border-color: #0000001a;
-  }
-  
-  .profile-author .text-wrapper-2 {
-    position: absolute;
-    width: 233px;
-    top: 23px;
-    left: 33px;
-    font-family: "Roboto-ExtraBold", Helvetica;
-    font-weight: 800;
-    color: #000000;
-    font-size: 20px;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .profile-author .p {
-    position: absolute;
-    width: 296px;
-    top: 57px;
-    left: 33px;
-    font-family: "Roboto-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 17.9px;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .profile-author .about {
-    position: absolute;
-    width: 361px;
-    height: 494px;
-    top: 454px;
-    left: 120px;
-    background-color: #ffffff;
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid;
-    border-color: #0000001a;
-  }
-  
-  .profile-author .text-wrapper-3 {
-    position: absolute;
-    width: 74px;
-    top: 23px;
-    left: 33px;
-    font-family: "Roboto-ExtraBold", Helvetica;
-    font-weight: 800;
-    color: #000000;
-    font-size: 20px;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .profile-author .text-wrapper-4 {
-    position: absolute;
-    width: 282px;
-    top: 67px;
-    left: 33px;
-    font-family: "Roboto-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 17.9px;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .profile-author .text-wrapper-5 {
-    position: absolute;
-    top: 122px;
-    left: 33px;
-    font-family: "Roboto-ExtraBold", Helvetica;
-    font-weight: 800;
-    color: #000000;
-    font-size: 20px;
-    letter-spacing: 0;
-    line-height: normal;
-    white-space: nowrap;
-  }
-  
-  .profile-author .in-west-philadelphia {
-    position: absolute;
-    width: 296px;
-    top: 153px;
-    left: 33px;
-    font-family: "Roboto-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 17.9px;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .profile-author .favourite-stories {
-    position: absolute;
-    width: 349px;
-    height: 281px;
-    top: 668px;
-    left: 546px;
-    background-color: #ffffff;
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid;
-    border-color: #0000001a;
-  }
-  
-  .profile-author .text-wrapper-6 {
-    position: absolute;
-    width: 196px;
-    top: 18px;
-    left: 77px;
-    font-family: "Roboto-ExtraBold", Helvetica;
-    font-weight: 800;
-    color: #000000;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .profile-author .dreaming-of-electric {
-    position: absolute;
-    width: 295px;
-    top: 62px;
-    left: 25px;
-    font-family: "Roboto-ExtraBold", Helvetica;
-    font-weight: 800;
-    color: #000000;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .profile-author .star-rating {
-    position: absolute;
-    width: 186px;
-    height: 36px;
-    top: 612px;
-    left: 627px;
-  }
-  
-  .profile-author .frame {
-    display: inline-flex;
-    align-items: flex-start;
-    position: relative;
-  }
-  
-  .profile-author .star {
-    position: relative;
-    width: 37.26px;
-    height: 36.12px;
-  }
-  
-  .profile-author .img {
-    position: absolute;
-    width: 32px;
-    height: 30px;
-    top: 2px;
-    left: 3px;
-  }
-  
-  .profile-author .text-wrapper-7 {
-    position: absolute;
-    width: 246px;
-    top: 542px;
-    left: 597px;
-    font-family: "Roboto-SemiBold", Helvetica;
-    font-weight: 600;
-    color: #000000;
-    font-size: 30px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 59.1px;
-    white-space: nowrap;
-  }
-  
+  background-color: #e2e2e2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.profile-author .overlap-wrapper {
+  background-color: #e2e2e2;
+  overflow: hidden;
+  width: 1440px;
+  height: 1024px;
+}
+
+.profile-author .overlap {
+  position: relative;
+  width: 1493px;
+  height: 1036px;
+  left: -26px;
+}
+
+.profile-author .ink-fluence {
+  position: absolute;
+  width: 1440px;
+  height: 1024px;
+  top: 0;
+  left: 26px;
+}
+
+.profile-author .frame {
+  position: absolute;
+  width: 1493px;
+  height: 652px;
+  top: 384px;
+  left: 0;
+  background-color: #d9d9d9;
+  border-radius: 2px;
+  border: 3px solid;
+  border-color: #b19ba8;
+}
+
+.profile-author .written-works {
+  position: absolute;
+  width: 361px;
+  height: 494px;
+  top: 454px;
+  left: 995px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #0000001a;
+}
+
+.profile-author .text-wrapper {
+  position: absolute;
+  width: 233px;
+  top: 23px;
+  left: 33px;
+  font-family: "Roboto-ExtraBold", Helvetica;
+  font-weight: 800;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.profile-author .div {
+  position: absolute;
+  width: 296px;
+  top: 57px;
+  left: 33px;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 17.9px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.profile-author .favourite-stories {
+  position: absolute;
+  width: 349px;
+  height: 281px;
+  top: 668px;
+  left: 572px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #0000001a;
+}
+
+.profile-author .text-wrapper-2 {
+  position: absolute;
+  width: 196px;
+  top: 18px;
+  left: 77px;
+  font-family: "Roboto-ExtraBold", Helvetica;
+  font-weight: 800;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.profile-author .dreaming-of-electric {
+  position: absolute;
+  width: 295px;
+  top: 62px;
+  left: 25px;
+  font-family: "Roboto-ExtraBold", Helvetica;
+  font-weight: 800;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.profile-author .about {
+  position: absolute;
+  width: 361px;
+  height: 494px;
+  top: 454px;
+  left: 146px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #0000001a;
+}
+
+.profile-author .bio {
+  display: flex;
+  width: 289px;
+  height: 48px;
+  align-items: center;
+  position: absolute;
+  top: 56px;
+  left: 33px;
+}
+
+.profile-author .bio-input {
+  position: relative;
+  width: 331px;
+  height: 38px;
+  margin-right: -42px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--gray);
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.profile-author .text-wrapper-3 {
+  position: absolute;
+  top: 122px;
+  left: 33px;
+  font-family: "Roboto-ExtraBold", Helvetica;
+  font-weight: 800;
+  color: #000000;
+  font-size: 20px;
+  white-space: nowrap;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.profile-author .name {
+  display: flex;
+  width: 289px;
+  height: 308px;
+  align-items: center;
+  position: absolute;
+  top: 165px;
+  left: 33px;
+}
+
+.profile-author .name-input {
+  position: relative;
+  width: 289px;
+  height: 308px;
+  margin-top: -1px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--gray);
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.profile-author .text-wrapper-4 {
+  position: absolute;
+  width: 74px;
+  top: 23px;
+  left: 33px;
+  font-family: "Roboto-ExtraBold", Helvetica;
+  font-weight: 800;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.profile-author .profile-picture {
+  position: absolute;
+  width: 288px;
+  height: 288px;
+  top: 240px;
+  left: 602px;
+  background-color: #b9b9b9;
+  border-radius: 30px;
+  border: 3px solid;
+  border-color: #b19ba8;
+}
+
+.profile-author .star-rating {
+  position: absolute;
+  width: 186px;
+  height: 36px;
+  top: 612px;
+  left: 653px;
+}
+
+.profile-author .frame-2 {
+  display: inline-flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.profile-author .star {
+  position: relative;
+  width: 37.26px;
+  height: 36.12px;
+}
+
+.profile-author .img {
+  position: absolute;
+  width: 32px;
+  height: 30px;
+  top: 2px;
+  left: 3px;
+}
+
+.profile-author .text-wrapper-5 {
+  position: absolute;
+  width: 246px;
+  top: 542px;
+  left: 623px;
+  font-family: "Roboto-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 59.1px;
+  white-space: nowrap;
+}
+
+.profile-author .edit-button {
+  all: unset;
+  box-sizing: border-box;
+  position: absolute;
+  width: 82px;
+  height: 31px;
+  top: 91px;
+  left: 1315px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.profile-author .text-wrapper-6 {
+  position: absolute;
+  width: 49px;
+  height: 19px;
+  top: 7px;
+  left: 17px;
+  font-family: "Roboto-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #b19ba8;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 18.9px;
+}
+
+.profile-author .naviation-bar {
+  position: absolute;
+  width: 1440px;
+  height: 64px;
+  top: 0;
+  left: 26px;
+  background-color: #b19ba8;
+}
+
+.profile-author .links {
+  position: absolute;
+  width: 51px;
+  height: 22px;
+  top: 21px;
+  left: 40px;
+}
+
+.profile-author .link {
+  position: absolute;
+  height: 22px;
+  top: 0;
+  left: 0;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.profile-author .logo {
+  position: absolute;
+  top: 15px;
+  left: 655px;
+  font-family: "Yusei Magic-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.profile-author .overlap-group {
+  position: absolute;
+  width: 146px;
+  height: 48px;
+  top: 10px;
+  left: 1260px;
+}
+
+.profile-author .background {
+  position: absolute;
+  width: 140px;
+  height: 40px;
+  top: 8px;
+  left: 6px;
+  background-color: #000000;
+  border-radius: 5px;
+}
+
+.profile-author .profile-button {
+  position: absolute;
+  width: 140px;
+  height: 40px;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.profile-author .text-wrapper-7 {
+  position: absolute;
+  width: 107px;
+  height: 25px;
+  top: 8px;
+  left: 17px;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #b19ba8;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 24.3px;
+}
