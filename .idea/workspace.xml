@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7fed28de-749f-4781-8389-0e5a9a34f08b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/group_django_project/group_django_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/group_django_project/group_django_project/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="7fed28de-749f-4781-8389-0e5a9a34f08b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,6 +52,7 @@
     "Python.settings.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -243,6 +242,7 @@
       <workItem from="1709819573613" duration="670000" />
       <workItem from="1709921584615" duration="2420000" />
       <workItem from="1709924013037" duration="208000" />
+      <workItem from="1709924223954" duration="905000" />
     </task>
     <servers />
   </component>
