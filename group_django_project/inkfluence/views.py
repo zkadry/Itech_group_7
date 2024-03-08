@@ -1,17 +1,18 @@
+from django.http import JsonResponse
 from django.shortcuts import render
-
-# Create your views here.
-# views.py
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 from .forms import SignUpForm
 from django.contrib.auth.forms import AuthenticationForm
 
+from .models import Profile
+
 def signup_view(request):
     if request.method == 'POST':
-        form = SignUpForm(request.POST)
+        form = SignUpForm(request.POST, request.FILES)
         if form.is_valid():
             user = form.save()
+            Profile.objects.create(user=user)
             login(request, user)
             return redirect('home')  # Replace 'home' with the name of the view you want to redirect to
     else:
@@ -38,3 +39,48 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect('login')  # Redirect to login page
+
+def home_view(request):
+    if request.user.is_authenticated:
+        return render(request, 'homePage.html')
+    else:
+        form = AuthenticationForm()
+        return render(request, 'login.html', {'form': form})
+
+def profile_view(request):
+    if request.user.is_authenticated:
+        profile = request.user.profile
+        if profile.role == 'reader':
+            return render(request, 'profileAuthor.html', {'profile': profile})
+        else:
+            return render(request, 'profileReader.html', {'profile': profile})
+    else:
+        form = AuthenticationForm()
+        return render(request, 'login.html', {'form': form})
+
+def story_submission_view(request):
+    if request.user.is_authenticated:
+        # verify the role is author
+        if request.user.profile.role != 'author':
+            return JsonResponse({'message': 'the user role is not author'}, status=400)
+        # create story object
+        return JsonResponse({'message': 'submit story successfully'}, status=201)
+    else:
+        form = AuthenticationForm()
+        return render(request, 'login.html', {'form': form})
+
+def story_view(request):
+    if request.user.is_authenticated:
+        # find the story
+        return render(request, 'storyPage.html')
+    else:
+        form = AuthenticationForm()
+        return render(request, 'login.html', {'form': form})
+
+def comment_view(request):
+    if request.user.is_authenticated:
+        # find the story
+        return JsonResponse({'message': 'comment story successfully'}, status=201)
+    else:
+        form = AuthenticationForm()
+        return render(request, 'login.html', {'form': form})

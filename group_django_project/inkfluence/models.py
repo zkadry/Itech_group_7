@@ -26,10 +26,16 @@ RATINGS = ((0, 0),
            (5, 5)
            )
 
+ROLE_CHOICES = (
+    ('author', 'Author'),
+    ('reader', 'Reader'),
+)
+
 class Profile(models.Model):
     # Associates a single profile with a single user.
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    # Holds an profile pic image and stores it in the project folder under files/profile_pics.
+    role = models.CharField(max_length=10, choices=ROLE_CHOICES, default='reader')
+    # Holds a profile pic image and stores it in the project folder under files/profile_pics.
     # We will need to add more backend logic to allow users to upload their own photos.
     profile_pic = models.ImageField(upload_to='group_django_project/files/profile_pics')
     # Short text bio for an author.
