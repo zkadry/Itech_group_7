@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    {% load static %}
     <link rel="stylesheet" href="{% static 'inkfluence/css/global.css' %}" />
     <link rel="stylesheet" href="{% static 'inkfluence/css/styleguide.css' %}" />
     <link rel="stylesheet" href="{% static 'inkfluence/css/profileReader.css' %}" />
@@ -10,7 +11,7 @@
     <div class="profile-reader">
       <div class="overlap-wrapper">
         <div class="overlap">
-          <img class="ink-fluence" src="static/img/inkFluence.png" />
+          <img class="ink-fluence" src="{% static 'inkfluence/img/inkFluence.png' %}" />
           <div class="frame"></div>
           <div class="favourite-genres">
             <div class="genres"><div class="genres-input">Genres</div></div>

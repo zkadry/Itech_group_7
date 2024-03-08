@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    {% load static %}
     <link rel="stylesheet" href="{% static 'inkfluence/css/global.css' %}" />
     <link rel="stylesheet" href="{% static 'inkfluence/css/styleguide.css' %}" />
     <link rel="stylesheet" href="{% static 'inkfluence/css/storySubmission.css' %}" />
@@ -10,12 +11,12 @@
     <div class="submission-page">
       <div class="overlap-wrapper">
         <div class="overlap">
-          <img class="inkfluence" src="static/img/inkFluence.png" />
-          <img class="img" src="static/img/inkFluence.png" />
+          <img class="inkfluence" src="{% static 'inkfluence/img/inkFluence.png' %}" />
+          <img class="img" src="{% static 'inkfluence/img/inkFluence.png' %}" />
           <div class="shadow"></div>
           <div class="submission-frame">
-            <img class="pen" src="static/img/pen.png" />
-            <img class="pen-2" src="static/img/pen-2.png" />
+            <img class="pen" src="{% static 'inkfluence/img/pen.png' %}" />
+            <img class="pen-2" src="{% static 'inkfluence/img/pen-2.png' %}" />
             <button class="submit-button"><div class="text-wrapper">Submit</div></button>
             <div class="story-submission">
               <div class="submission"><div class="submission-input">Story</div></div>

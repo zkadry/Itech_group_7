@@ -15,7 +15,7 @@
 .search-page .overlap {
   position: relative;
   height: 1111px;
-  background-image: url(./{% static 'img/ink-fluence.png);
+  background-image: url(./{% static 'inkfluence/img/ink-fluence.png);
   background-size: cover;
   background-position: 50% 50%;
 }

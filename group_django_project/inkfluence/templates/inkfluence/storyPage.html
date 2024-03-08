@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    {% load static %}
     <link rel="stylesheet" href="{% static 'inkfluence/css/global.css' %}" />
     <link rel="stylesheet" href="{% static 'inkfluence/css/styleguide.css' %}" />
     <link rel="stylesheet" href="{% static 'inkfluence/css/storyPage.css' %}" />
@@ -10,9 +11,9 @@
     <div class="story-page">
       <div class="overlap-wrapper">
         <div class="overlap">
-          <img class="inkfluence" src="static/img/inkFluence.png" />
-          <img class="img" src="static/img/inkFluence.png" />
-          <img class="inkfluence-2" src="static/img/inkFluence.png" />
+          <img class="inkfluence" src="{% static 'inkfluence/img/inkFluence.png' %}" />
+          <img class="img" src="{% static 'inkfluence/img/inkFluence.png' %}" />
+          <img class="inkfluence-2" src="{% static 'inkfluence/img/inkFluence.png' %}" />
           <button class="delete-button"><div class="text-wrapper">Delete</div></button>
           <div class="comment-window">
             <div class="overlap-group">
@@ -23,18 +24,18 @@
               <div class="comment-frame">
                 <div class="comment"><div class="comment-input">Comment here...</div></div>
               </div>
-              <img class="comment-2" src="static/img/comment-2.png" />
-              <img class="comment-3" src="static/img/comment-2.png" />
-              <img class="comment-4" src="static/img/comment-3.png" />
-              <img class="comment-5" src="static/img/comment-3.png" />
+              <img class="comment-2" src="{% static 'inkfluence/img/comment-2.png' %}" />
+              <img class="comment-3" src="{% static 'inkfluence/img/comment-2.png' %}" />
+              <img class="comment-4" src="{% static 'inkfluence/img/comment-3.png' %}" />
+              <img class="comment-5" src="{% static 'inkfluence/img/comment-3.png' %}" />
               <div class="star-rating">
                 <div class="div">Rate</div>
                 <div class="frame">
-                  <div class="star-wrapper"><img class="star-2" src="static/img/Star-Defult.png" /></div>
-                  <div class="star-wrapper"><img class="star-2" src="static/img/Star-Defult.png" /></div>
-                  <div class="star-wrapper"><img class="star-2" src="static/img/Star-Defult.png" /></div>
-                  <div class="star-wrapper"><img class="star-2" src="static/img/Star-Defult.png" /></div>
-                  <div class="star-wrapper"><img class="star-2" src="static/img/Star-Defult.png" /></div>
+                  <div class="star-wrapper"><img class="star-2" src="{% static 'inkfluence/img/Star-Defult.png' %}" /></div>
+                  <div class="star-wrapper"><img class="star-2" src="{% static 'inkfluence/img/Star-Defult.png' %}" /></div>
+                  <div class="star-wrapper"><img class="star-2" src="{% static 'inkfluence/img/Star-Defult.png' %}" /></div>
+                  <div class="star-wrapper"><img class="star-2" src="{% static 'inkfluence/img/Star-Defult.png' %}" /></div>
+                  <div class="star-wrapper"><img class="star-2" src="{% static 'inkfluence/img/Star-Defult.png' %}" /></div>
                 </div>
               </div>
               <button class="submit-button"><div class="text-wrapper-2">Submit</div></button>
@@ -52,7 +53,7 @@
             </p>
             <div class="overlap-2">
               <p class="p">You can also add this story to your favfavourites!</p>
-              <img class="heart" src="static/img/heart.svg" />
+              <img class="heart" src="{% static 'inkfluence/img/heart.png' %}" />
             </div>
           </div>
           <div class="chapter-frame">
@@ -62,17 +63,17 @@
             </p>
             <div class="overlap-3">
               <div class="text-wrapper-6">Chapters</div>
-              <img class="edit" src="static/img/image.png" />
+              <img class="edit" src="{% static 'inkfluence/img/image.png' %}" />
             </div>
           </div>
           <div class="story-info">
             <div class="frame-wrapper">
               <div class="frame-2">
-                <div class="star-wrapper"><img class="star-3" src="static/img/Star-Defult.png" /></div>
-                <div class="star-wrapper"><img class="star-3" src="static/img/Star-Defult.png" /></div>
-                <div class="star-wrapper"><img class="star-3" src="static/img/Star-Defult.png" /></div>
-                <div class="star-wrapper"><img class="star-3" src="static/img/Star-Defult.png" /></div>
-                <div class="star-wrapper"><img class="star-3" src="static/img/Star-Defult.png" /></div>
+                <div class="star-wrapper"><img class="star-3" src="{% static 'inkfluence/img/Star-Defult.png' %}" /></div>
+                <div class="star-wrapper"><img class="star-3" src="{% static 'inkfluence/img/Star-Defult.png' %}" /></div>
+                <div class="star-wrapper"><img class="star-3" src="{% static 'inkfluence/img/Star-Defult.png' %}" /></div>
+                <div class="star-wrapper"><img class="star-3" src="{% static 'inkfluence/img/Star-Defult.png' %}" /></div>
+                <div class="star-wrapper"><img class="star-3" src="{% static 'inkfluence/img/Star-Defult.png' %}" /></div>
               </div>
             </div>
             <div class="text-wrapper-7">Rating</div>
@@ -81,7 +82,7 @@
               <div class="text-wrapper-9">Genre</div>
               <div class="text-wrapper-10">Jane Doe</div>
               <div class="text-wrapper-11">Author</div>
-              <img class="edit" src="static/img/edit.png" />
+              <img class="edit" src="{% static 'inkfluence/img/edit.png' %}" />
             </div>
           </div>
           <div class="story-frame">
