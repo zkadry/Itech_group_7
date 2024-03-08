@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    {% load static %}
     <link rel="stylesheet" href="{% static 'inkfluence/css/global.css' %}" />
     <link rel="stylesheet" href="{% static 'inkfluence/css/styleguide.css' %}" />
     <link rel="stylesheet" href="{% static 'inkfluence/css/profileAuthor.css' %}" />
@@ -10,7 +11,7 @@
     <div class="profile-author">
       <div class="overlap-wrapper">
         <div class="overlap">
-          <img class="ink-fluence" src="static/img/inkFluence.png" />
+          <img class="ink-fluence" src="{% static 'inkfluence/img/inkFluence.png' %}" />
           <div class="frame"></div>
           <div class="written-works">
             <div class="text-wrapper">Stories by this author</div>
@@ -31,11 +32,11 @@
           <div class="profile-picture"></div>
           <div class="star-rating">
             <div class="frame-2">
-              <div class="star"><img class="img" src="static/img/Star-active.png" /></div>
-              <div class="star"><img class="img" src="static/img/Star-active.png" /></div>
-              <div class="star"><img class="img" src="static/img/Star-active.png" /></div>
-              <div class="star"><img class="img" src="static/img/Star-active.png" /></div>
-              <div class="star"><img class="img" src="static/img/Star-active.png" /></div>
+              <div class="star"><img class="img" src="{% static 'inkfluence/img/Star-active.png' %}" /></div>
+              <div class="star"><img class="img" src="{% static 'inkfluence/img/Star-active.png' %}" /></div>
+              <div class="star"><img class="img" src="{% static 'inkfluence/img/Star-active.png' %}" /></div>
+              <div class="star"><img class="img" src="{% static 'inkfluence/img/Star-active.png' %}" /></div>
+              <div class="star"><img class="img" src="{% static 'inkfluence/img/Star-active.png' %}" /></div>
             </div>
           </div>
           <div class="text-wrapper-5">Author Rating</div>
