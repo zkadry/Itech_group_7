@@ -2,9 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styleguide.css" />
-    <link rel="stylesheet" href="login.css" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'inkfluence/css/global.css' %}" />
+    <link rel="stylesheet" href="{% static 'inkfluence/css/styleguide.css' %}" />
+    <link rel="stylesheet" href="{% static 'inkfluence/css/login.css' %}" />
   </head>
   <body>
     <div class="login-page">
@@ -28,7 +29,7 @@
               <div class="text-wrapper-6">Username</div>
               <div class="overlap-2">
                 <div class="text-wrapper-7">InkFluence</div>
-                <img class="logo" src="static/img/logo.png" />
+                <img class="logo" src="{% static 'inkfluence/img/logo.png' %}" />
               </div>
             </div>
           </div>
