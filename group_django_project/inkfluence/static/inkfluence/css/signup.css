@@ -121,7 +121,7 @@
   position: absolute;
   width: 172px;
   height: 43px;
-  top: 591px;
+  top: 571px;
   left: 82px;
   background-color: #b19ba8;
   border-radius: 21.53px;
@@ -148,7 +148,7 @@
   position: absolute;
   width: 172px;
   height: 43px;
-  top: 591px;
+  top: 571px;
   left: 293px;
   background-color: #b19ba8;
   border-radius: 21.53px;
@@ -159,7 +159,7 @@
 .sign-up-page .role {
   position: absolute;
   width: 339px;
-  top: 537px;
+  top: 497px;
   left: 103px;
   font-family: "Roboto-Regular", Helvetica;
   font-weight: 400;
@@ -175,7 +175,7 @@
   position: absolute;
   width: 415px;
   height: 65px;
-  top: 457px;
+  top: 417px;
   left: 71px;
   background-color: #d9d9d9;
   border-radius: 35.62px;
@@ -199,53 +199,10 @@
   padding: 0;
 }
 
-.sign-up-page .email {
-  width: 349px;
-  height: 46px;
-  position: relative;
-  top: 10px;
-  left: 28px;
-  border: none;
-  background: none;
-  font-family: "Poppins-Regular", Helvetica;
-  font-weight: 400;
-  color: var(--gray);
-  font-size: 18px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-  padding: 0;
-}
-
 .sign-up-page .text-wrapper-5 {
   position: absolute;
   width: 339px;
-  top: 400px;
-  left: 103px;
-  font-family: "Roboto-Regular", Helvetica;
-  font-weight: 400;
-  color: #00000080;
-  font-size: 24.3px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: 59.1px;
-  white-space: nowrap;
-}
-
-.sign-up-page .email-wrapper {
-  position: absolute;
-  width: 415px;
-  height: 65px;
-  top: 340px;
-  left: 71px;
-  background-color: #d9d9d9;
-  border-radius: 35.62px;
-}
-
-.sign-up-page .text-wrapper-6 {
-  position: absolute;
-  width: 339px;
-  top: 283px;
+  top: 360px;
   left: 103px;
   font-family: "Roboto-Regular", Helvetica;
   font-weight: 400;
@@ -261,7 +218,7 @@
   position: absolute;
   width: 415px;
   height: 65px;
-  top: 223px;
+  top: 263px;
   left: 71px;
   background-color: #d9d9d9;
   border-radius: 35.62px;
@@ -288,7 +245,7 @@
 .sign-up-page .text-wrapper-7 {
   position: absolute;
   width: 339px;
-  top: 166px;
+  top: 206px;
   left: 103px;
   font-family: "Roboto-Regular", Helvetica;
   font-weight: 400;
