@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login, logout
@@ -42,54 +43,40 @@ def logout_view(request):
     logout(request)
     return redirect('login')  # Redirect to login page
 
+@login_required
 def home_view(request):
-    if request.user.is_authenticated:
-        return render(request, 'homePage.html')
-    else:
-        return redirect('login')
+    return render(request, 'homePage.html')
 
+@login_required
 def search_view(request):
-    if request.user.is_authenticated:
-        return render(request, 'searchPage.html')
-    else:
-        return redirect('login')
+    return render(request, 'searchPage.html')
 
+@login_required
 def submit_view(request):
-    if request.user.is_authenticated:
-        return render(request, 'storySubmission.html')
-    else:
-        return redirect('login')
+    return render(request, 'storySubmission.html')
 
+@login_required
 def profile_view(request):
-    if request.user.is_authenticated:
-        profile = request.user.profile
-        if profile.role == 'reader':
-            return render(request, 'profileAuthor.html', {'profile': profile})
-        else:
-            return render(request, 'profileReader.html', {'profile': profile})
+    profile = request.user.profile
+    if profile.role == 'reader':
+        return render(request, 'profileAuthor.html', {'profile': profile})
     else:
-        return redirect('login')
+        return render(request, 'profileReader.html', {'profile': profile})
 
+@login_required
 def story_submission_view(request):
-    if request.user.is_authenticated:
-        # verify the role is author
-        if request.user.profile.role != 'author':
-            return JsonResponse({'message': 'the user role is not author'}, status=400)
-        # create story object
-        return JsonResponse({'message': 'submit story successfully'}, status=201)
-    else:
-        return redirect('login')
+    # verify the role is author
+    if request.user.profile.role != 'author':
+        return JsonResponse({'message': 'the user role is not author'}, status=400)
+    # create story object
+    return JsonResponse({'message': 'submit story successfully'}, status=201)
 
+@login_required
 def story_view(request):
-    if request.user.is_authenticated:
-        # find the story
-        return render(request, 'storyPage.html')
-    else:
-        return redirect('login')
+    # find the story
+    return render(request, 'storyPage.html')
 
+@login_required
 def comment_view(request):
-    if request.user.is_authenticated:
-        # find the story
-        return JsonResponse({'message': 'comment story successfully'}, status=201)
-    else:
-        return redirect('login')
+    # find the story
+    return JsonResponse({'message': 'comment story successfully'}, status=201)
