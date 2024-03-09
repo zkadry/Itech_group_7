@@ -117,30 +117,25 @@
   overflow-y: scroll;
 }
 
-.submission-page .submission {
-  display: flex;
-  width: 1028px;
-  align-items: center;
+.submission-page .story-input {
+  width: 1107px;
+  height: 1500px;
   position: relative;
-  top: 33px;
-  left: 73px;
-}
-
-.submission-page .submission-input {
-  position: relative;
-  width: 1028px;
-  height: 3222px;
-  margin-top: -1px;
+  top: 30px;
+  left: 34px;
+  border: none;
+  background: none;
   font-family: "Poppins-Regular", Helvetica;
   font-weight: 400;
   color: var(--gray);
-  font-size: 24px;
+  font-size: 18px;
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
+  padding: 0;
 }
 
-.submission-page .div {
+.submission-page .story {
   top: 751px;
   position: absolute;
   width: 511px;
@@ -169,27 +164,22 @@
   overflow-y: scroll;
 }
 
-.submission-page .summary {
-  display: flex;
-  width: 1028px;
-  align-items: center;
-  position: relative;
-  top: 19px;
-  left: 74px;
-}
-
 .submission-page .summary-input {
+  width: 1107px;
+  height: 300px;
   position: relative;
-  width: 1028px;
-  height: 321px;
-  margin-top: -1px;
+  top: 28px;
+  left: 35px;
+  border: none;
+  background: none;
   font-family: "Poppins-Regular", Helvetica;
   font-weight: 400;
   color: var(--gray);
-  font-size: 24px;
+  font-size: 18px;
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
+  padding: 0;
 }
 
 .submission-page .story-summary {
@@ -219,20 +209,14 @@
   border-color: #000000;
 }
 
-.submission-page .div-wrapper {
-  display: flex;
-  width: 1078px;
-  height: 42px;
-  align-items: center;
+.submission-page .genre-tags-wrapper {
+  width: 1107px;
+  height: 37px;
   position: relative;
-  top: 7px;
-  left: 49px;
-}
-
-.submission-page .text-wrapper-2 {
-  position: relative;
-  width: 1078px;
-  height: 35px;
+  top: 12px;
+  left: 31px;
+  border: none;
+  background: none;
   font-family: "Poppins-Regular", Helvetica;
   font-weight: 400;
   color: var(--gray);
@@ -240,9 +224,10 @@
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
+  padding: 0;
 }
 
-.submission-page .text-wrapper-3 {
+.submission-page .text-wrapper-2 {
   position: absolute;
   width: 511px;
   top: 302px;
@@ -267,6 +252,24 @@
   border-radius: 100.83px;
   border: 3px solid;
   border-color: #000000;
+}
+
+.submission-page .input {
+  width: 1107px;
+  height: 37px;
+  position: relative;
+  top: 11px;
+  left: 33px;
+  border: none;
+  background: none;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--gray);
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  padding: 0;
 }
 
 .submission-page .your-tile {
@@ -306,7 +309,7 @@
   line-height: 59.1px;
 }
 
-.submission-page .text-wrapper-4 {
+.submission-page .text-wrapper-3 {
   position: absolute;
   width: 934px;
   top: 0;
@@ -392,7 +395,7 @@
   border-radius: 5px;
 }
 
-.submission-page .text-wrapper-5 {
+.submission-page .text-wrapper-4 {
   position: absolute;
   width: 107px;
   height: 25px;

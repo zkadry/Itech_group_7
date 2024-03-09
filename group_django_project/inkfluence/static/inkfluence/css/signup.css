@@ -15,7 +15,7 @@
 .sign-up-page .overlap {
   position: relative;
   height: 1024px;
-  background-image: url(./{% static 'inkfluence/img/ink-fluence.png);
+  background-image: url(./inkfluence/img/inkFluence.png);
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -117,55 +117,61 @@
   letter-spacing: 0;
 }
 
-.sign-up-page .password-wrapper {
+.sign-up-page .author-button {
   position: absolute;
-  width: 415px;
-  height: 65px;
-  top: 574px;
-  left: 71px;
-  background-color: #d9d9d9;
-  border-radius: 35.62px;
-}
-
-.sign-up-page .password {
-  display: flex;
-  width: 331px;
-  height: 48px;
-  align-items: center;
-  position: relative;
-  top: 9px;
-  left: 42px;
+  width: 172px;
+  height: 43px;
+  top: 591px;
+  left: 82px;
+  background-color: #b19ba8;
+  border-radius: 21.53px;
+  border: 1.08px solid;
+  border-color: #000000;
 }
 
 .sign-up-page .text-wrapper-4 {
-  position: relative;
-  width: 331px;
-  height: 38px;
-  font-family: "Poppins-Regular", Helvetica;
+  position: absolute;
+  width: 166px;
+  height: 22px;
+  top: 8px;
+  left: 2px;
+  font-family: "Roboto-Regular", Helvetica;
   font-weight: 400;
-  color: var(--gray);
-  font-size: 18px;
+  color: #000000;
+  font-size: 18.3px;
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
 }
 
-.sign-up-page .password-2 {
+.sign-up-page .reader-button {
+  position: absolute;
+  width: 172px;
+  height: 43px;
+  top: 591px;
+  left: 293px;
+  background-color: #b19ba8;
+  border-radius: 21.53px;
+  border: 1.08px solid;
+  border-color: #000000;
+}
+
+.sign-up-page .role {
   position: absolute;
   width: 339px;
   top: 537px;
   left: 103px;
   font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
   color: #00000080;
   font-size: 24.3px;
-  line-height: 59.1px;
-  white-space: nowrap;
-  font-weight: 400;
   text-align: center;
   letter-spacing: 0;
+  line-height: 59.1px;
+  white-space: nowrap;
 }
 
-.sign-up-page .div-wrapper {
+.sign-up-page .password-wrapper {
   position: absolute;
   width: 415px;
   height: 65px;
@@ -175,19 +181,55 @@
   border-radius: 35.62px;
 }
 
+.sign-up-page .password {
+  width: 349px;
+  height: 46px;
+  position: relative;
+  top: 10px;
+  left: 28px;
+  border: none;
+  background: none;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--gray);
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  padding: 0;
+}
+
+.sign-up-page .email {
+  width: 349px;
+  height: 46px;
+  position: relative;
+  top: 10px;
+  left: 28px;
+  border: none;
+  background: none;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--gray);
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  padding: 0;
+}
+
 .sign-up-page .text-wrapper-5 {
   position: absolute;
   width: 339px;
-  top: 420px;
+  top: 400px;
   left: 103px;
   font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
   color: #00000080;
   font-size: 24.3px;
-  line-height: 59.1px;
-  white-space: nowrap;
-  font-weight: 400;
   text-align: center;
   letter-spacing: 0;
+  line-height: 59.1px;
+  white-space: nowrap;
 }
 
 .sign-up-page .email-wrapper {
@@ -200,40 +242,22 @@
   border-radius: 35.62px;
 }
 
-.sign-up-page .email {
-  width: 331px;
-  height: 38px;
-  position: relative;
-  top: 10px;
-  left: 42px;
-  border: none;
-  background: none;
-  font-family: "Poppins-Regular", Helvetica;
-  color: var(--gray);
-  font-size: 18px;
-  line-height: normal;
-  font-weight: 400;
-  text-align: center;
-  letter-spacing: 0;
-  padding: 0;
-}
-
 .sign-up-page .text-wrapper-6 {
   position: absolute;
   width: 339px;
-  top: 303px;
+  top: 283px;
   left: 103px;
   font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
   color: #00000080;
   font-size: 24.3px;
-  line-height: 59.1px;
-  white-space: nowrap;
-  font-weight: 400;
   text-align: center;
   letter-spacing: 0;
+  line-height: 59.1px;
+  white-space: nowrap;
 }
 
-.sign-up-page .usename-wrapper {
+.sign-up-page .username-wrapper {
   position: absolute;
   width: 415px;
   height: 65px;
@@ -243,20 +267,28 @@
   border-radius: 35.62px;
 }
 
-.sign-up-page .usename {
-  display: flex;
-  width: 331px;
-  height: 48px;
-  align-items: center;
+.sign-up-page .username {
+  height: 46px;
+  top: 10px;
+  left: 32px;
   position: relative;
-  top: 8px;
-  left: 42px;
+  width: 349px;
+  border: none;
+  background: none;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--gray);
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  padding: 0;
 }
 
 .sign-up-page .text-wrapper-7 {
   position: absolute;
   width: 339px;
-  top: 186px;
+  top: 166px;
   left: 103px;
   font-family: "Roboto-Regular", Helvetica;
   font-weight: 400;

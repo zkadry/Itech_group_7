@@ -148,29 +148,24 @@
   overflow-y: scroll;
 }
 
-.story-page .comment {
-  display: flex;
-  width: 725px;
-  height: 542px;
-  align-items: center;
-  position: relative;
-  top: 26px;
-  left: 58px;
-}
-
 .story-page .comment-input {
+  width: 761px;
+  height: 500px;
   position: relative;
-  width: 725px;
-  height: 540px;
+  top: 33px;
+  left: 40px;
+  border: none;
+  background: none;
   font-family: "Poppins-Regular", Helvetica;
   font-weight: 400;
   color: var(--gray);
   font-size: 18px;
   letter-spacing: 0;
   line-height: normal;
+  padding: 0;
 }
 
-.story-page .comment-2 {
+.story-page .comment {
   position: absolute;
   width: 113px;
   height: 112px;
@@ -178,7 +173,7 @@
   left: 777px;
 }
 
-.story-page .comment-3 {
+.story-page .comment-2 {
   position: absolute;
   width: 115px;
   height: 118px;
@@ -186,7 +181,7 @@
   left: 34px;
 }
 
-.story-page .comment-4 {
+.story-page .comment-3 {
   position: absolute;
   width: 117px;
   height: 107px;
@@ -194,7 +189,7 @@
   left: 14px;
 }
 
-.story-page .comment-5 {
+.story-page .comment-4 {
   position: absolute;
   width: 118px;
   height: 112px;
@@ -343,18 +338,18 @@
 .story-page .background-2 {
   width: 224px;
   height: 89px;
-  top: 1897px;
+  top: 1887px;
   left: 531px;
   border-radius: 7.86px;
   position: absolute;
   background-color: #000000;
 }
 
-.story-page .big-button-2 {
+.story-page .div-wrapper {
   position: absolute;
   width: 224px;
   height: 88px;
-  top: 1890px;
+  top: 1880px;
   left: 524px;
   background-color: #ffffff;
   border-radius: 5px;

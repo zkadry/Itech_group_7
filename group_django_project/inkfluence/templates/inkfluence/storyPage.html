@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    {% load static %}
     <link rel="stylesheet" href="{% static 'inkfluence/css/global.css' %}" />
     <link rel="stylesheet" href="{% static 'inkfluence/css/styleguide.css' %}" />
     <link rel="stylesheet" href="{% static 'inkfluence/css/storyPage.css' %}" />
@@ -21,13 +20,11 @@
               <div class="coment-frame"></div>
               <p class="share-your-thought">Loved the story? Share your thoughts!</p>
               <div class="leave-a-comment">Leave a comment below</div>
-              <div class="comment-frame">
-                <div class="comment"><div class="comment-input">Comment here...</div></div>
-              </div>
+              <div class="comment-frame"><textarea class="comment-input" placeholder="Leave a comment..." type="text"></textarea></div>
+              <img class="comment" src="{% static 'inkfluence/img/comment-2.png' %}" />
               <img class="comment-2" src="{% static 'inkfluence/img/comment-2.png' %}" />
-              <img class="comment-3" src="{% static 'inkfluence/img/comment-2.png' %}" />
+              <img class="comment-3" src="{% static 'inkfluence/img/comment-3.png' %}" />
               <img class="comment-4" src="{% static 'inkfluence/img/comment-3.png' %}" />
-              <img class="comment-5" src="{% static 'inkfluence/img/comment-3.png' %}" />
               <div class="star-rating">
                 <div class="div">Rate</div>
                 <div class="frame">
@@ -43,16 +40,16 @@
           </div>
           <div class="comments-frame"><div class="text-wrapper-3">Comments</div></div>
           <div class="background"></div>
-          <button class="big-button"><div class="text-wrapper-4">Next Chapter</div></div>
+          <div class="big-button"><div class="text-wrapper-4">Next Chapter</div></div>
           <div class="background-2"></div>
-          <button class="big-button-2"><div class="text-wrapper-4">Previous Chapter</div></div>
+          <div class="div-wrapper"><div class="text-wrapper-4">Previous Chapter</div></div>
           <div class="feedback-frame">
             <div class="text-wrapper-5">Leave Feedback</div>
             <p class="liked-what-you-read">
               Liked what you read?<br /><br />Let the author know what you thought in the comment section below!
             </p>
             <div class="overlap-2">
-              <p class="p">You can also add this story to your favfavourites!</p>
+              <p class="p">You can also add this story to your favourites!</p>
               <img class="heart" src="{% static 'inkfluence/img/heart.png' %}" />
             </div>
           </div>
@@ -225,7 +222,7 @@
             <div class="logo">INKFLUENCE</div>
             <div class="overlap-5">
               <div class="background-3"></div>
-              <button class="profile-button"><div class="text-wrapper-13">Profile</div></div>
+              <button class="profile-button"><div class="text-wrapper-13">Profile</div></button>
             </div>
           </div>
         </div>

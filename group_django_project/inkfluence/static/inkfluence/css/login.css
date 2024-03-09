@@ -15,7 +15,7 @@
 .login-page .overlap {
   position: relative;
   height: 1024px;
-  background-image: url(./{% static 'inkfluence/img/ink-fluence.png);
+  background-image: url(./inkfluence/img/inkFluence.png);
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -117,7 +117,7 @@
   line-height: 34.8px;
 }
 
-.login-page .password-wrapper {
+.login-page .search-wrapper {
   position: absolute;
   width: 233px;
   height: 53px;
@@ -127,18 +127,18 @@
   border-radius: 20px;
 }
 
-.login-page .div-wrapper {
+.login-page .search {
   display: flex;
-  width: 185px;
+  width: 180px;
   align-items: center;
   position: relative;
   top: 13px;
-  left: 24px;
+  left: 26px;
 }
 
-.login-page .text-wrapper-4 {
+.login-page .password-wrapper {
   position: relative;
-  width: 185px;
+  width: 180px;
   margin-top: -1px;
   font-family: "Poppins-Regular", Helvetica;
   font-weight: 400;
@@ -149,7 +149,7 @@
   line-height: normal;
 }
 
-.login-page .text-wrapper-5 {
+.login-page .text-wrapper-4 {
   position: absolute;
   width: 283px;
   top: 325px;
@@ -174,7 +174,25 @@
   border-radius: 20px;
 }
 
-.login-page .text-wrapper-6 {
+.login-page .input {
+  width: 185px;
+  position: relative;
+  top: 14px;
+  left: 24px;
+  border: none;
+  background: none;
+  margin-top: -1px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--gray);
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  padding: 0;
+}
+
+.login-page .text-wrapper-5 {
   position: absolute;
   width: 283px;
   top: 207px;
@@ -197,7 +215,7 @@
   left: 122px;
 }
 
-.login-page .text-wrapper-7 {
+.login-page .text-wrapper-6 {
   position: absolute;
   height: 42px;
   top: 113px;
@@ -290,7 +308,7 @@
   border-radius: 5px;
 }
 
-.login-page .text-wrapper-8 {
+.login-page .text-wrapper-7 {
   position: absolute;
   width: 107px;
   height: 25px;
