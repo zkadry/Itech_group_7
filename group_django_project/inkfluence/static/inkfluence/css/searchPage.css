@@ -65,7 +65,7 @@
   width: 1047px;
   height: 60px;
   top: 8px;
-  left: 5px;
+  left: 15px;
   background-color: #00000080;
   border-radius: 32px;
   box-shadow: var(--shadow-3);
@@ -81,7 +81,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: var(--whitewhite);
+  background-color: #ffffff;
   border-radius: 32px;
   overflow: hidden;
   box-shadow: var(--shadow-3);
@@ -124,6 +124,22 @@
   height: 22px;
   top: 21px;
   left: 40px;
+}
+
+.search-page .link2 {
+  width: 58px;
+  left: 110px;
+  position: absolute;
+  height: 22px;
+  top: 21px;
+}
+
+.search-page .link3 {
+  width: px;
+  left: 1156px;
+  position: absolute;
+  height: 22px;
+  top: 21px;
 }
 
 .search-page .link {

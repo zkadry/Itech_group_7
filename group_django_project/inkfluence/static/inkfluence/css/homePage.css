@@ -686,7 +686,7 @@
   width: 1047px;
   height: 60px;
   top: 137px;
-  left: 202px;
+  left: 215px;
   background-color: #00000080;
   border-radius: 32px;
   box-shadow: var(--shadow-3);
@@ -702,7 +702,7 @@
   position: absolute;
   top: 129px;
   left: 197px;
-  background-color: var(--whitewhite);
+  background-color: #ffffff;
   border-radius: 32px;
   overflow: hidden;
   box-shadow: var(--shadow-3);
@@ -745,6 +745,22 @@
   height: 22px;
   top: 21px;
   left: 40px;
+}
+
+.naviation-bar .link2 {
+  width: 58px;
+  left: 110px;
+  position: absolute;
+  height: 22px;
+  top: 21px;
+}
+
+.naviation-bar .link3 {
+  width: px;
+  left: 1156px;
+  position: absolute;
+  height: 22px;
+  top: 21px;
 }
 
 .home-page .link {
