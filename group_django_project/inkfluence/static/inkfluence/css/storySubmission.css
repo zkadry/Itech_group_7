@@ -341,6 +341,22 @@
   left: 40px;
 }
 
+.submission-page .link2 {
+  width: 58px;
+  left: 110px;
+  position: absolute;
+  height: 22px;
+  top: 21px;
+}
+
+.submission-page .link3 {
+  width: px;
+  left: 1156px;
+  position: absolute;
+  height: 22px;
+  top: 21px;
+}
+
 .submission-page .link {
   position: absolute;
   height: 22px;
