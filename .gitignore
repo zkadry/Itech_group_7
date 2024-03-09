@@ -2,3 +2,9 @@ env/
 db.sqlite3
 __pycache__/
 *.pyc
+/.idea/Itech_group_7.iml
+/.idea/.gitignore
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/vcs.xml

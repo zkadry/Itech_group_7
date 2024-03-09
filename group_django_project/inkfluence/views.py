@@ -12,7 +12,9 @@ def signup_view(request):
         form = SignUpForm(request.POST, request.FILES)
         if form.is_valid():
             user = form.save()
-            Profile.objects.create(user=user)
+            role = form.cleaned_data.get('role')
+            profile = Profile.objects.create(user=user, role=role)
+            profile.save()
             login(request, user)
             return redirect('home')  # Replace 'home' with the name of the view you want to redirect to
     else:
@@ -28,7 +30,7 @@ def login_view(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('home')  # Replace 'home' with the name of the view you want to redirect to
+                return render(request, 'homePage.html')
         else:
             # Return an 'invalid login' error message
             form = AuthenticationForm()
@@ -43,6 +45,20 @@ def logout_view(request):
 def home_view(request):
     if request.user.is_authenticated:
         return render(request, 'homePage.html')
+    else:
+        form = AuthenticationForm()
+        return render(request, 'login.html', {'form': form})
+
+def search_view(request):
+    if request.user.is_authenticated:
+        return render(request, 'searchPage.html')
+    else:
+        form = AuthenticationForm()
+        return render(request, 'login.html', {'form': form})
+
+def submit_view(request):
+    if request.user.is_authenticated:
+        return render(request, 'storySubmission.html')
     else:
         form = AuthenticationForm()
         return render(request, 'login.html', {'form': form})
