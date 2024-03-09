@@ -46,22 +46,19 @@ def home_view(request):
     if request.user.is_authenticated:
         return render(request, 'homePage.html')
     else:
-        form = AuthenticationForm()
-        return render(request, 'login.html', {'form': form})
+        return redirect('login')
 
 def search_view(request):
     if request.user.is_authenticated:
         return render(request, 'searchPage.html')
     else:
-        form = AuthenticationForm()
-        return render(request, 'login.html', {'form': form})
+        return redirect('login')
 
 def submit_view(request):
     if request.user.is_authenticated:
         return render(request, 'storySubmission.html')
     else:
-        form = AuthenticationForm()
-        return render(request, 'login.html', {'form': form})
+        return redirect('login')
 
 def profile_view(request):
     if request.user.is_authenticated:
@@ -71,8 +68,7 @@ def profile_view(request):
         else:
             return render(request, 'profileReader.html', {'profile': profile})
     else:
-        form = AuthenticationForm()
-        return render(request, 'login.html', {'form': form})
+        return redirect('login')
 
 def story_submission_view(request):
     if request.user.is_authenticated:
@@ -82,21 +78,18 @@ def story_submission_view(request):
         # create story object
         return JsonResponse({'message': 'submit story successfully'}, status=201)
     else:
-        form = AuthenticationForm()
-        return render(request, 'login.html', {'form': form})
+        return redirect('login')
 
 def story_view(request):
     if request.user.is_authenticated:
         # find the story
         return render(request, 'storyPage.html')
     else:
-        form = AuthenticationForm()
-        return render(request, 'login.html', {'form': form})
+        return redirect('login')
 
 def comment_view(request):
     if request.user.is_authenticated:
         # find the story
         return JsonResponse({'message': 'comment story successfully'}, status=201)
     else:
-        form = AuthenticationForm()
-        return render(request, 'login.html', {'form': form})
+        return redirect('login')
