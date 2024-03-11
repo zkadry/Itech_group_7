@@ -1,43 +1,47 @@
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.http import JsonResponse
-from django.shortcuts import render
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 from .forms import SignUpForm
-from django.contrib.auth.forms import AuthenticationForm
 
-from .models import Profile
+from .models import *
+
 
 def signup_view(request):
     if request.method == 'POST':
-        form = SignUpForm(request.POST, request.FILES)
-        if form.is_valid():
-            user = form.save()
-            role = form.cleaned_data.get('role')
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        is_author = request.POST.get('is_author')
+
+        if User.objects.filter(username=username).exists():
+            context = {'error': 'Username already exists. Choose another one.'}
+            return render(request, 'signup.html', context)
+        else:
+            user = User.objects.create_user(username=username, password=password)
+            role = 'author' if is_author else 'reader'
             profile = Profile.objects.create(user=user, role=role)
             profile.save()
             login(request, user)
-            return redirect('home')  # Replace 'home' with the name of the view you want to redirect to
+            return redirect('home')
     else:
-        form = SignUpForm()
-    return render(request, 'signup.html', {'form': form})
+        return render(request, 'signup.html')
 
 def login_view(request):
     if request.method == 'POST':
-        form = AuthenticationForm(request, data=request.POST)
-        if form.is_valid():
-            username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password')
-            user = authenticate(username=username, password=password)
-            if user is not None:
-                login(request, user)
-                return render(request, 'homePage.html')
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        print(f'username={username}    password={password}')
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            login(request, user)
+            return redirect('home')
         else:
-            # Return an 'invalid login' error message
-            form = AuthenticationForm()
+            context = {'error': 'Invalid username or password.'}
+            return render(request, 'login.html', context)
     else:
-        form = AuthenticationForm()
-    return render(request, 'login.html', {'form': form})
+        return render(request, 'login.html')
 
 def logout_view(request):
     logout(request)
@@ -45,7 +49,19 @@ def logout_view(request):
 
 @login_required
 def home_view(request):
-    return render(request, 'homePage.html')
+    title = 'And So It Begins...'
+    author = 'Jane Doe'
+    summary_text = 'Lorem ipsum dolor sit amet consectetur. Arcu donec in facilisis pulvinar elit vitae. In justo vitae vitae\
+              in massa lorem orci pellentesque. Suspendisse amet donec vel est porttitor purus. Tincidunt praesent risus\
+              a feugiat facilisi. Senectus nulla penatibus arcu rhoncus viverra id eleifend sapien etiam. Ac quis\
+              lacinia lacus quam.'
+    genre = 'Fantasy'
+
+    context = {'title': title,
+               'summary_text': summary_text,
+               'author': author,
+               'genre': genre}
+    return render(request, 'homePage.html', context)
 
 @login_required
 def search_view(request):
@@ -65,6 +81,7 @@ def profile_view(request):
 
 @login_required
 def story_submission_view(request):
+    print(request.user.profile.role)
     # verify the role is author
     if request.user.profile.role != 'author':
         return JsonResponse({'message': 'the user role is not author'}, status=400)

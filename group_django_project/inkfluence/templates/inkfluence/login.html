@@ -13,22 +13,35 @@
           <div class="overlap-group">
             <div class="background"></div>
             <div class="login-frame">
-              <form action="#">
+              <form method="post" action="/inkfluence/login/">
+                {% csrf_token %}
+                <!--              1111 need to opt it to make it beatiful-->
+                {% if error %}
+                <div class="alert alert-danger" role="alert">
+                  {{ error }}
+                </div>
+                {% endif %}
+                <!--              1111 need to opt it to make it beatiful-->
                 <button class="login-button"><div class="text-wrapper">Login</div></button>
                 <div class="div">
                   <div class="text-wrapper-2">Sign Up</div>
                   <div class="text-wrapper-3">Don’t have an account?</div>
                 </div>
                 <div class="search-wrapper">
-                  <div class="password-wrapper"><input class="input" placeholder="Password" type="text" /></div>
+                  <div class="password-wrapper">
+                    <input class="input" name="password" placeholder="Password" type="password" />
+                  </div>
                 </div>
                 <div class="text-wrapper-4">Password</div>
-                <div class="username-wrapper"><input class="input" placeholder="Username" type="text" /></div>
+                <div class="username-wrapper">
+                  <input class="input" name="username" placeholder="Username" type="text" />
+                </div>
                 <div class="text-wrapper-5">Username</div>
                 <div class="overlap-2">
                   <div class="text-wrapper-6">InkFluence</div>
                   <img class="logo" src="{% static 'inkfluence/img/logo.png' %}" />
-                  </form>
+                </div>
+              </form>
               </div>
             </div>
           </div>
