@@ -324,7 +324,7 @@
   border-radius: 5px;
 }
 
-.login-page .text-wrapper-7 {
+.login-page .text-wrapper-8 {
   position: absolute;
   width: 107px;
   height: 25px;
@@ -337,4 +337,8 @@
   text-align: center;
   letter-spacing: 0;
   line-height: 24.3px;
+}
+
+.login-button:active {
+  background-color: #d9d9d9;
 }

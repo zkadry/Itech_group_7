@@ -156,6 +156,19 @@
   border-color: #000000;
 }
 
+.sign-up-page .author-button,
+.sign-up-page .reader-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto-Regular", Helvetica;
+}
+
+.sign-up-page .author-button input[type="checkbox"],
+.sign-up-page .reader-button input[type="checkbox"] {
+  margin-right: 5px;
+}
+
 .sign-up-page .role {
   position: absolute;
   width: 339px;
@@ -387,4 +400,8 @@
   text-align: center;
   letter-spacing: 0;
   line-height: 24.3px;
+}
+
+.sign-up-button:active {
+  background-color: #d9d9d9;
 }

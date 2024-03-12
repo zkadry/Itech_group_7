@@ -14,7 +14,7 @@
             <div class="shadow"></div>
             <div class="sign-up-frame">
               <div class="div">
-                <div class="text-wrapper">Sign in</div>
+                <a href="/inkfluence/" class="text-wrapper">Sign in</a>
                 <div class="text-wrapper-2">Already have an account?</div>
               </div>
               <form method="post" action="{% url 'signup' %}">
@@ -56,12 +56,13 @@
             <div class="logo-2">INKFLUENCE</div>
             <div class="overlap-3">
               <div class="background"></div>
-              <button class="profile-button"><div class="text-wrapper-9">Profile</div></button>
+              <button id="profBtn" class="profile-button"><div class="text-wrapper-9">Profile</div></button>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    <script src="{% static 'inkfluence/js/navbar.js' %}"></script>
   </body>
 </html>
 
