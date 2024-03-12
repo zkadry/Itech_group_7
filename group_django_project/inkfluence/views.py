@@ -6,6 +6,7 @@ from django.shortcuts import render, redirect
 from .forms import SignUpForm
 
 from .models import *
+from inkfluence.bing_search import run_query
 
 
 def signup_view(request):
@@ -65,7 +66,14 @@ def home_view(request):
 
 @login_required
 def search_view(request):
-    return render(request, 'searchPage.html')
+    result_list = []
+
+    if request.method == 'POST':
+        query = request.POST['query'].strip()
+        if query:
+            result_list = run_query(query)
+
+    return render(request, 'searchPage.html', {'result_list': result_list})
 
 @login_required
 def submit_view(request):
