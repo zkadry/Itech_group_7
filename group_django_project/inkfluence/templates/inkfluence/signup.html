@@ -17,14 +17,32 @@
                 <div class="text-wrapper">Sign in</div>
                 <div class="text-wrapper-2">Already have an account?</div>
               </div>
-              <button class="sign-up-button"><div class="text-wrapper-3">Sign Up</div></button>
-              <button class="author-button"><div class="text-wrapper-4">Author</div></button>
-              <button class="reader-button"><div class="text-wrapper-4">Reader</div></button>
-              <div class="role">Choose Your Role</div>
-              <div class="password-wrapper"><input class="password" placeholder="Password" type="text" /></div>
-              <div class="text-wrapper-5">Password</div>
-              <div class="username-wrapper"><input class="username" placeholder="Username" type="text" /></div>
-              <div class="text-wrapper-7">Username</div>
+              <form method="post" action="{% url 'signup' %}">
+                {% csrf_token %}
+                <!--              1111 need to opt it to make it beatiful-->
+                {% if error %}
+                <div class="alert alert-danger" role="alert">
+                  {{ error }}
+                </div>
+                {% endif %}
+                <!--              1111 need to opt it to make it beatiful-->
+                <button class="sign-up-button"><div class="text-wrapper-3">Sign Up</div></button>
+                <div class="author-button">
+                  <label>
+                    <input type="checkbox" name="is_author" value="author"> Author
+                  </label>
+                </div>
+                <div class="reader-button">
+                  <label>
+                    <input type="checkbox" name="is_reader" value="reader"> Reader
+                  </label>
+                </div>
+                <div class="role">Choose Your Role</div>
+                <div class="password-wrapper"><input name="password" class="password" placeholder="Password" type="password" /></div>
+                <div class="text-wrapper-5">Password</div>
+                <div class="username-wrapper"><input name="username" class="username" placeholder="Username" type="text" /></div>
+                <div class="text-wrapper-7">Username</div>
+              </form>
               <div class="overlap-2">
                 <div class="text-wrapper-8">InkFluence</div>
                 <img class="logo" src="{% static 'inkfluence/img/logo.png' %}" />
