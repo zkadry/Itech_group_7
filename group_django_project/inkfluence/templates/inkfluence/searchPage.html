@@ -14,9 +14,12 @@
         <div class="overlap">
           <div class="overlap-group">
             <div class="genre-shadow"></div>
-            <div class="most-popular-frame">
+            <div class="results-frame">
+              <div class="title-container">
               {% if result_list %}
                 <h2>Results</h2>
+              </div>
+              <div class="results-container">
                 <div class="list-group">
                   {% for result in result_list %}
                     <div class="list-group-item">
@@ -33,30 +36,22 @@
                 </div>
               {% endif %}
             </div>
+            </div>
           </div>
           <div class="div">
             <div class="search-bar-shadow"></div>
             <div class="search-bar">
-              <form class="form-inline"
-                    id ="user-form"
-                    method="post"
-                    action="{% url 'search' %}">
-                    {% csrf_token %}
-                    <button class="btn btn-primary"
-                            type="submit"
-                            name="submit">
-                      <img class="img" src="{% static 'inkfluence/img/search.png' %}" />
-                    </button>
-                    <div class="form-group">
-                      <input class="form-control"
-                             type="text"
-                             size="120"
-                             placeholder="Search..."
-                             name="query"
-                             id="query" />
-                    </div>
-              </form>
-              <img class="img" src="{% static 'inkfluence/img/filter.png' %}" />
+              <form class="form-inline" id="user-form" method="post" action="{% url 'search' %}">
+                {% csrf_token %}
+                <div class="button-container">
+                  <button class="btn btn-primary" type="submit" name="submit">
+                    <img class="img" src="{% static 'inkfluence/img/search.png' %}" />
+                  </button>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" type="text" size="120" placeholder="Search..." name="query" id="query" />
+                </div>
+              </form>           
             </div>
           </div>
           <div class="naviation-bar">
