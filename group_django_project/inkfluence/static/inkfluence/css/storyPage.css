@@ -9,12 +9,12 @@
 .story-page .overlap-wrapper {
   background-color: #e2e2e2;
   width: 1440px;
-  height: 3500px;
+  height: 2800px;
 }
 
 .story-page .overlap {
   position: relative;
-  height: 3500px;
+  height: 2800px;
 }
 
 .story-page .ink-fluence {
@@ -75,7 +75,7 @@
   position: absolute;
   width: 922px;
   height: 610px;
-  top: 2804px;
+  top: 2100px;
   left: 249px;
 }
 
@@ -274,8 +274,8 @@
 .story-page .comments-frame {
   position: absolute;
   width: 1311px;
-  height: 648px;
-  top: 2060px;
+  height: 620px;
+  top: 1400px;
   left: 65px;
   background-color: #ffffffb2;
   border-radius: 30px;
@@ -359,7 +359,7 @@
   position: absolute;
   width: 281px;
   height: 656px;
-  top: 1328px;
+  top: 600px;
   left: 19px;
   background-color: #00000080;
   border-radius: 30px;
@@ -611,7 +611,7 @@
 
 .story-page .story-frame {
   width: 1076px;
-  height: 1706px;
+  height: 1200px;
   left: 324px;
   background-color: #302f2f;
   overflow-y: scroll;

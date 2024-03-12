@@ -1,48 +1,68 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
+<head>
+    <meta charset="utf-8"/>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'inkfluence/css/styleguide.css' %}" />
-    <link rel="stylesheet" href="{% static 'inkfluence/css/storySubmission.css' %}" />
-  </head>
-  <body>
-    <div class="submission-page">
-      <div class="overlap-wrapper">
+    <link rel="stylesheet" href="{% static 'inkfluence/css/styleguide.css' %}"/>
+    <link rel="stylesheet" href="{% static 'inkfluence/css/storySubmission.css' %}"/>
+</head>
+<body>
+<div class="submission-page">
+    <div class="overlap-wrapper">
         <div class="overlap">
-          <img class="inkfluence" src="{% static 'inkfluence/img/inkFluence.png' %}" />
-          <img class="img" src="{% static 'inkfluence/img/inkFluence.png' %}" />
-          <div class="shadow"></div>
-          <div class="submission-frame">
-            <img class="pen" src="{% static 'inkfluence/img/pen.png' %}" />
-            <img class="pen-2" src="{% static 'inkfluence/img/pen-2.png' %}" />
-            <button class="submit-button"><div class="text-wrapper">Submit</div></button>
-            <div class="story-submission"><textarea class="story-input" placeholder="And so it begins..." type="text"></textarea></div>
-            <div class="story">Your Story</div>
-            <div class="story-summary-frame"><textarea class="summary-input" placeholder="Summary" type="text"></textarea></div>
-            <div class="story-summary">Story summary (50 words)</div>
-            <div class="overlap-group"><input class="genre-tags-wrapper" placeholder="#genre #tags" type="text" /></div>
-            <div class="text-wrapper-2">Genre Tags</div>
-            <div class="title-wrapper"><input class="input" placeholder="Title" type="text" /></div>
-            <div class="your-tile">Your Title</div>
-            <div class="overlap-2">
-              <div class="share-your-story">Share Your Story!</div>
-              <div class="text-wrapper-3">Share Your Story!</div>
+            <img class="inkfluence" src="{% static 'inkfluence/img/inkFluence.png' %}"/>
+            <img class="img" src="{% static 'inkfluence/img/inkFluence.png' %}"/>
+            <div class="shadow"></div>
+            <div class="submission-frame">
+                <img class="pen" src="{% static 'inkfluence/img/pen.png' %}"/>
+                <img class="pen-2" src="{% static 'inkfluence/img/pen-2.png' %}"/>
+
+                <form method="post" action="/inkfluence/story_submission/">
+                    {% csrf_token %}
+                    <button class="submit-button">
+                        <div class="text-wrapper">Submit</div>
+                    </button>
+                    <div class="story-submission"><textarea class="story-input" placeholder="And so it begins..."
+                                                            type="text" name="content" required="true"></textarea></div>
+                    <div class="story">Your Story</div>
+
+                    <div class="story-summary-frame"><textarea class="summary-input" placeholder="Description"
+                                                               type="text" name="description" required="true"></textarea></div>
+                    <div class="story-summary">Story summary (50 words)</div>
+
+                    <div class="overlap-group"><input class="genre-tags-wrapper" placeholder="#genre #tags"
+                                                      type="text" name="genre" required="true"/></div>
+                    <div class="text-wrapper-2">Genre Tags</div>
+
+                    <div class="title-wrapper"><input class="input" placeholder="Title" type="text" name="title" required="true"/></div>
+                    <div class="your-tile">Your Title</div>
+
+                    {% if error %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ error }}
+                    </div>
+                    {% endif %}
+                </form>
+                <div class="overlap-2">
+                    <div class="share-your-story">Share Your Story!</div>
+                    <div class="text-wrapper-3">Share Your Story!</div>
+                </div>
             </div>
-          </div>
-          <div class="naviation-bar">
-            <div class="links"><a href="/inkfluence/home/" div class="link">Home</a></div>
-            <div class="link2"><a href="/inkfluence/search/" div class="link">Search</a></div>
-            <div class="link3"><a href="/inkfluence/submit/" class="link">Submit</a></div>
-            <div class="logo">INKFLUENCE</div>
-            <div class="overlap-3">
-              <div class="background"></div>
-              <button id="profBtn" class="profile-button"><div class="text-wrapper-4">Profile</div></div>
+            <div class="naviation-bar">
+                <div class="links"><a href="/inkfluence/home/" div class="link">Home</a></div>
+                <div class="link2"><a href="/inkfluence/search/" div class="link">Search</a></div>
+                <div class="link3"><a href="/inkfluence/submit/" class="link">Submit</a></div>
+                <div class="logo">INKFLUENCE</div>
+                <div class="overlap-3">
+                    <div class="background"></div>
+                    <button id="profBtn" class="profile-button">
+                        <div class="text-wrapper-4">Profile</div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-        </div>
-    <script src="{% static 'inkfluence/js/navbar.js' %}"></script>
-  </body>
+    </div>
+</div>
+</div>
+<script src="{% static 'inkfluence/js/navbar.js' %}"></script>
+</body>
 </html>

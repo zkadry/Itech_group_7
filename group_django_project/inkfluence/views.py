@@ -27,6 +27,7 @@ def signup_view(request):
     else:
         return render(request, 'signup.html')
 
+
 def login_view(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -43,9 +44,11 @@ def login_view(request):
     else:
         return render(request, 'login.html')
 
+
 def logout_view(request):
     logout(request)
     return redirect('login')  # Redirect to login page
+
 
 @login_required
 def home_view(request):
@@ -63,13 +66,16 @@ def home_view(request):
                'genre': genre}
     return render(request, 'homePage.html', context)
 
+
 @login_required
 def search_view(request):
     return render(request, 'searchPage.html')
 
+
 @login_required
 def submit_view(request):
     return render(request, 'storySubmission.html')
+
 
 @login_required
 def profile_view(request):
@@ -79,21 +85,77 @@ def profile_view(request):
     else:
         return render(request, 'profileReader.html', {'profile': profile})
 
+
 @login_required
 def story_submission_view(request):
-    print(request.user.profile.role)
-    # verify the role is author
-    if request.user.profile.role != 'author':
-        return JsonResponse({'message': 'the user role is not author'}, status=400)
-    # create story object
-    return JsonResponse({'message': 'submit story successfully'}, status=201)
+    if request.method == 'POST':
+        print(request.user.profile.role)
+        # verify the role is author
+        if request.user.profile.role != 'author':
+            return JsonResponse({'message': 'the user role is not author'}, status=400)
+        # create story object
+        title = request.POST.get("title")
+        if Story.objects.filter(title=title).exists():
+            context = {'error': '\t\tStory title exists. Please change the title.'}
+            return render(request, 'storySubmission.html', context)
+        genre = request.POST.get("genre")
+        description = request.POST.get("description")
+        content = request.POST.get("content")
+        # create Story object
+        Story.objects.create(
+            title=title,
+            genre=genre,
+            description=description,
+            content=content,
+            author=request.user.profile
+        )
+        # return JsonResponse({'message': 'submit story successfully'}, status=201)
+        return render(request, 'profileAuthor.html')
+    else:
+        return render(request, 'storySubmission.html')
+
 
 @login_required
 def story_view(request):
-    # find the story
-    return render(request, 'storyPage.html')
+    # find the story by title
+    title = request.GET.get("title", "")
+    author = request.GET.get("author", "")
+    title_story = Story.objects.filter(title=title).first()
+    author_story = Story.objects.filter(author__user__username=author).first()
+    if title_story:
+        story_dict = title_story.__dict__
+        comments_objs = title_story.comments.all()
+        comments = [obj.__dict__ for obj in comments_objs]
+        story_dict.update({"comments": comments})
+        story_dict.pop('_state', None)
+        return render(request, 'storyPage.html', story_dict)
+    elif author_story:
+        story_dict = author_story.__dict__
+        comments_objs = author_story.comments.all()
+        comments = [obj.__dict__ for obj in comments_objs]
+        story_dict.update({"comments": comments})
+        story_dict.pop('_state', None)
+        return render(request, 'storyPage.html', story_dict)
+    else:
+        return render(request, 'storyPage.html')
+
 
 @login_required
-def comment_view(request):
-    # find the story
-    return JsonResponse({'message': 'comment story successfully'}, status=201)
+def comment_view(request, story_id):
+    if request.method == 'POST':
+        comment = request.POST.get("comment")
+        rating = request.POST.get("rating")
+        Comment.objects.create(body=comment, story_id=story_id, rating=rating)
+    #
+    author_story = Story.objects.filter(author=request.user.profile).first()
+    if author_story:
+        story_dict = author_story.__dict__
+        #
+        comments_objs = author_story.comments.all()
+        comments = [obj.__dict__ for obj in comments_objs]
+        story_dict.update({"comments": comments})
+        story_dict.pop('_state', None)
+        return render(request, 'storyPage.html', story_dict)
+    else:
+        return render(request, 'storyPage.html')
+    # return JsonResponse({'message': 'comment story successfully'}, status=201)
