@@ -16,49 +16,49 @@
           <div class="genre-frame">
             <div class="overlap-group">
               <div class="genre-shadow"></div>
-              <div class="genre"><div class="text-wrapper">Romance</div></div>
+              <div class="genre"><div class="text-wrapper">{{ genre_list.7 }}</div></div>
             </div>
           </div>
           <div class="overlap-group-wrapper">
             <div class="overlap-group">
               <div class="genre-shadow"></div>
-              <div class="genre"><div class="text-wrapper">Historical</div></div>
+              <div class="genre"><div class="text-wrapper">{{ genre_list.6 }}</div></div>
             </div>
           </div>
           <div class="div-wrapper">
             <div class="overlap-group">
               <div class="genre-shadow"></div>
-              <div class="genre"><div class="text-wrapper">Thriller</div></div>
+              <div class="genre"><div class="text-wrapper">{{ genre_list.5 }}</div></div>
             </div>
           </div>
           <div class="div">
             <div class="overlap-group">
               <div class="genre-shadow"></div>
-              <div class="genre"><div class="text-wrapper">Sci-fi</div></div>
+              <div class="genre"><div class="text-wrapper">{{ genre_list.4 }}</div></div>
             </div>
           </div>
           <div class="genre-frame-2">
             <div class="overlap-group">
               <div class="genre-shadow"></div>
-              <div class="genre-2"><div class="text-wrapper-2">Other</div></div>
+              <div class="genre"><div class="text-wrapper">{{ genre_list.3 }}</div></div>
             </div>
           </div>
           <div class="genre-frame-3">
             <div class="overlap-group">
               <div class="genre-shadow"></div>
-              <div class="genre-2"><div class="text-wrapper-2">Mystery</div></div>
+              <div class="genre"><div class="text-wrapper">{{ genre_list.2 }}</div></div>
             </div>
           </div>
           <div class="genre-frame-4">
             <div class="overlap-group">
               <div class="genre-shadow"></div>
-              <div class="genre-2"><div class="text-wrapper-2">Horror</div></div>
+              <div class="genre"><div class="text-wrapper">{{ genre_list.1 }}</div></div>
             </div>
           </div>
           <div class="genre-frame-5">
             <div class="overlap-group">
               <div class="genre-shadow"></div>
-              <div class="genre-2"><div class="text-wrapper-2">Fantasy</div></div>
+              <div class="genre"><div class="text-wrapper">{{ genre_list.0 }}</div></div>
             </div>
           </div>
           <div class="genres-shadow">Genres</div>
@@ -66,43 +66,49 @@
           <div class="recently-released"></div>
           <div class="recently-released-2">
             <div class="overlap-2">
-              <div class="text-wrapper-4">Historical</div>
+              <div class="text-wrapper-4">{{ latest_stories.0.get_genre_display }}</div>
               <div class="text-wrapper-5">Genre</div>
               <img class="historical" src="{% static 'inkfluence/img/historical.png' %}" />
             </div>
-            <div class="author">By Janet Austen</div>
-            <div class="title">Pride and Pedicures</div>
+            <div class="author">By {{ latest_stories.0.author.user.username }}</div>
+            <div class="title">
+              <a href="{% url 'story' %}?title={{ latest_stories.0.title|urlencode }}">{{ latest_stories.0.title }}</a>
+            </div>
           </div>
           <div class="recently-released-3"></div>
           <div class="recently-released-4">
             <div class="overlap-3">
               <img class="sci-fi" src="{% static 'inkfluence/img/sci-fi.png' %}" />
-              <div class="text-wrapper-6">Sci-Fi</div>
+              <div class="text-wrapper-6">{{ latest_stories.1.get_genre_display }}</div>
               <div class="text-wrapper-7">Genre</div>
-              <div class="author-2">By Shaun Thorn</div>
+              <div class="author-2">By {{ latest_stories.1.author.user.username }}</div>
             </div>
-            <div class="title">Dreaming of Electric Sheep</div>
+            <div class="title">
+              <a href="{% url 'story' %}?title={{ latest_stories.1.title|urlencode }}">{{ latest_stories.1.title }}</a>
+            </div>
           </div>
           <div class="recently-released-5"></div>
           <div class="recently-released-6">
             <div class="overlap-4">
-              <div class="text-wrapper-8">Horror</div>
+              <div class="text-wrapper-8">{{ latest_stories.2.get_genre_display }}</div>
               <div class="text-wrapper-9">Genre</div>
               <img class="horror" src="{% static 'inkfluence/img/horror.png' %}" />
             </div>
-            <div class="author">By Timmy Smith</div>
-            <div class="title">The Next Adventure</div>
+            <div class="author">By {{ latest_stories.2.author.user.username }}</div>
+            <div class="title">
+              <a href="{% url 'story' %}?title={{ latest_stories.2.title|urlencode }}">{{ latest_stories.2.title }}</a>
+            </div>
           </div>
           <div class="recently-released-7">Recently Released</div>
           <div class="text-wrapper-10">Recently Released</div>
           <div class="most-popular-shadow"></div>
           <div class="most-popular-frame">
             <p class="summary-text">
-              {{ summary_text }}
+              {{ top_story.description }}
             </p>
             <div class="overlap-5">
               <div class="div-2"></div>
-              <div class="div-wrapper-2"><div class="text-wrapper-11">{{ genre }}</div></div>
+              <div class="div-wrapper-2"><div class="text-wrapper-11">{{ top_story.get_genre_display }}</div></div>
             </div>
             <div class="overlap-6">
               <div class="summary-shadow"></div>
@@ -110,18 +116,14 @@
             </div>
             <div class="overlap-7">
               <div class="div-2"></div>
-              <div class="div-wrapper-2"><div class="text-wrapper-11">By {{ author }}</div></div>
+              <div class="div-wrapper-2"><div class="text-wrapper-11">By {{ top_story.author.user.username }}</div></div>
             </div>
-            <div class="text-wrapper-13">{{ title }}</div>
+            <div class="text-wrapper-13">
+              <a href="{% url 'story' %}?title={{ top_story.title|urlencode }}">{{ top_story.title }}</a>
+            </div>
           </div>
           <div class="most-popular-shadow-2">Most Popular</div>
           <div class="text-wrapper-14">Most Popular</div>
-          <div class="search-bar-shadow"></div>
-          <div class="search-bar">
-            <img class="img-2" src="{% static 'inkfluence/img/search.png' %}" />
-            <input class="search" placeholder="Search ..." type="text" />
-            <img class="img-2" src="{% static 'inkfluence/img/filter.png' %}" />
-          </div>
           <div class="naviation-bar">
             <div class="links"><a href="/inkfluence/home/" div class="link">Home</a></div>
             <div class="link2"><a href="/inkfluence/search/" div class="link">Search</a></div>
