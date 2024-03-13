@@ -4,7 +4,7 @@ from django.db.models import Avg
 from django.http import JsonResponse
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
-from .forms import SignUpForm
+from . import forms
 
 from .models import *
 from inkfluence.bing_search import run_query
@@ -25,7 +25,7 @@ def signup_view(request):
             profile = Profile.objects.create(user=user, role=role)
             profile.save()
             login(request, user)
-            return redirect('home')
+            return redirect('edit_profile')
     else:
         return render(request, 'signup.html')
 
@@ -77,10 +77,28 @@ def submit_view(request):
 @login_required
 def profile_view(request):
     profile = request.user.profile
+    profile_pic = request.user.profile.profile_pic
+    stories = request.user.profile.stories.all()[:4]
+    name = request.user.username
+    bio = request.user.profile.bio
+    genres = request.user.profile.genre_likes
+
     if profile.role == 'reader':
-        return render(request, 'profileAuthor.html', {'profile': profile})
+        return render(request, 'profileReader.html', {'profile': profile, 'profile_pic': profile_pic, 'stories': stories, 'name': name, 'bio': bio, 'genres': genres})
     else:
-        return render(request, 'profileReader.html', {'profile': profile})
+        return render(request, 'profileAuthor.html', {'profile': profile, 'profile_pic': profile_pic, 'stories': stories, 'name': name, 'bio': bio, 'genres': genres})
+
+@login_required
+def edit_profile_view(request):
+    if request.method == 'POST':
+        profile = request.user.profile
+        form = forms.ProfileForm(request.POST, request.FILES, instance=profile)
+        if form.is_valid():
+            form.save()
+            return redirect('profile')
+    else:
+        form = forms.ProfileForm()
+    return render(request, 'editProfile.html', {'form': form})
 
 @login_required
 def story_submission_view(request):

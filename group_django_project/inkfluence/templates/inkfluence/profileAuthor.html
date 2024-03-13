@@ -14,7 +14,12 @@
           <div class="frame"></div>
           <div class="written-works">
             <div class="text-wrapper">Stories by this author</div>
-            <p class="div">And so it begins... (Fantasy)</p>
+            <br \><br \><br \><br \><br \>
+            <ul>
+              {% for story in stories%}
+              <p> {{story}} </p>
+              {% endfor %}
+            </ul>
           </div>
           <div class="favourite-stories">
             <div class="text-wrapper-2">Favourite Stories</div>
@@ -23,12 +28,11 @@
             </p>
           </div>
           <div class="about">
-            <textarea class="bio-wrapper" placeholder="Bio" type="text"></textarea>
-            <div class="text-wrapper-3">Bio</div>
-            <div class="name-wrapper"><input class="name-input" placeholder="Name" type="text" /></div>
-            <div class="text-wrapper-4">Name</div>
+            <div class="text-wrapper-3">Name <br /> {{ name }} <br /><br /> Bio <br /> {{ bio }}</div>
           </div>
-          <div class="profile-picture"></div>
+          <div class="profile-picture">
+            <img src = "{{ user.profile.profile_pic.url }}"/>
+          </div>
           <div class="star-rating">
             <div class="frame-2">
               <div class="star"><img class="img" src="{% static 'inkfluence/img/Star-active.png' %}" /></div>
