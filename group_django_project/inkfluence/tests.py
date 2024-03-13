@@ -44,4 +44,5 @@ class UserLoginTest(TestCase):
         # Attempt to log in with invalid credentials
         response = self.client.post(reverse('login'), {'username': 'testuser', 'password': 'wrongpassword'})
         # Check for failure status code or error message
-        self.assertFormError(response, 'form', None, 'Please enter a correct username and password. Note that both fields may be case-sensitive.')
+        # self.assertFormError(response, 'form', None, 'Please enter a correct username and password. Note that both fields may be case-sensitive.')
+        self.assertEqual(response.context['error'], 'Invalid username or password.')
