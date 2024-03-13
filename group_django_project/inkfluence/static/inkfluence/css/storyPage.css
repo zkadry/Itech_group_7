@@ -345,6 +345,16 @@
   background-color: #000000;
 }
 
+.login-page .background-3 {
+  position: absolute;
+  width: 140px;
+  height: 40px;
+  top: 8px;
+  left: -156px;
+  background-color: #000000;
+  border-radius: 5px;
+}
+
 .story-page .div-wrapper {
   position: absolute;
   width: 224px;
@@ -719,7 +729,7 @@
 
 .story-page .link3 {
   width: px;
-  left: 1156px;
+  left: 190px;
   position: absolute;
   height: 22px;
   top: 21px;
@@ -759,7 +769,7 @@
   left: 1260px;
 }
 
-.story-page .background-3 {
+.story-page .background-4 {
   width: 140px;
   height: 40px;
   top: 8px;
@@ -774,9 +784,23 @@
   width: 140px;
   height: 40px;
   top: 0;
+  left: -160px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.story-page .logout-button {
+  position: absolute;
+  width: 140px;
+  height: 40px;
+  top: 0;
   left: 0;
   background-color: #ffffff;
   border-radius: 5px;
+}
+
+.logout-button:active {
+  background-color: #d9d9d9;
 }
 
 .story-page .text-wrapper-13 {

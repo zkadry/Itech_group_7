@@ -307,7 +307,7 @@
 
 .profile-author .link3 {
   width: px;
-  left: 1156px;
+  left: 190px;
   position: absolute;
   height: 22px;
   top: 21px;
@@ -355,9 +355,29 @@
   left: 6px;
   background-color: #000000;
   border-radius: 5px;
+} 
+
+.profile-author .background-3 {
+  position: absolute;
+  width: 140px;
+  height: 40px;
+  top: 8px;
+  left: -156px;
+  background-color: #000000;
+  border-radius: 5px;
 }
 
 .profile-author .profile-button {
+  position: absolute;
+  width: 140px;
+  height: 40px;
+  top: 0;
+  left: -160px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.profile-author .logout-button {
   position: absolute;
   width: 140px;
   height: 40px;
@@ -366,6 +386,11 @@
   background-color: #ffffff;
   border-radius: 5px;
 }
+
+.logout-button:active {
+  background-color: #d9d9d9;
+}
+
 
 .profile-author .text-wrapper-7 {
   position: absolute;
