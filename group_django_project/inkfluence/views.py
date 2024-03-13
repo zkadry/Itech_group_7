@@ -22,8 +22,7 @@ def signup_view(request):
         else:
             user = User.objects.create_user(username=username, password=password)
             role = 'author' if is_author else 'reader'
-            profile = Profile.objects.create(user=user, role=role)
-            profile.save()
+            Profile.objects.create(user=user, role=role)
             login(request, user)
             return redirect('home')
     else:
