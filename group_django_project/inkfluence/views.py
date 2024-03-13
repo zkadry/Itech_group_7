@@ -1,5 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.db.models import Avg
 from django.http import JsonResponse
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
@@ -50,18 +51,12 @@ def logout_view(request):
 
 @login_required
 def home_view(request):
-    title = 'And So It Begins...'
-    author = 'Jane Doe'
-    summary_text = 'Lorem ipsum dolor sit amet consectetur. Arcu donec in facilisis pulvinar elit vitae. In justo vitae vitae\
-              in massa lorem orci pellentesque. Suspendisse amet donec vel est porttitor purus. Tincidunt praesent risus\
-              a feugiat facilisi. Senectus nulla penatibus arcu rhoncus viverra id eleifend sapien etiam. Ac quis\
-              lacinia lacus quam.'
-    genre = 'Fantasy'
-
-    context = {'title': title,
-               'summary_text': summary_text,
-               'author': author,
-               'genre': genre}
+    top_story = Story.objects.annotate(avg_rating=Avg('comments__rating')).order_by('-avg_rating').first()
+    latest_stories = Story.objects.order_by('-date')[:3]
+    genre_list = [genre_name for code, genre_name in GENRES]
+    context = {'top_story': top_story,
+               'latest_stories': latest_stories,
+               'genre_list': genre_list}
     return render(request, 'homePage.html', context)
 
 @login_required
