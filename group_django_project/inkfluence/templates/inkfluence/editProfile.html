@@ -1,17 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Edit Profile</title>
-</head>
-<body>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'inkfluence/css/styleguide.css' %}" />
+    <link rel="stylesheet" href="{% static 'inkfluence/css/signup.css' %}" />
+  </head>
+  <body>
     <div class="edit-profile">
-        <h2>Edit your profile</h2>
-        <form class="edit-profile-form" action="{% url 'edit_profile'%}" method = "post" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form }}
-            <input type="submit" value="Update">
-        </form>
-    </div>
-</body>
+      <div class="overlap-wrapper">
+        <div class="overlap">
+          <div class="overlap-group">
+            <div class="shadow"></div>
+            <div class="edit-frame">
+              <form class="edit-profile-form" action="{% url 'edit_profile'%}" method = "post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form }}
+                <button type="submit" class="update-button"><div class="text-wrapper-3">Update</div></button>
+                <div class="bio-wrapper"><textarea name="bio" class="bio" placeholder="Bio" type="text"></textarea></div>
+                <div class="text-wrapper-5">Bio</div>
+                <div class="name-wrapper"><input name="nasme" class="name" placeholder="Name" type="text" /></div>
+                <div class="text-wrapper-7">Name</div>
+                <div class="pic-wrapper-2"><input type="file" id="profilePicture" name="profilePicture" class="profile-pic"><br></div>
+                <div class="text-wrapper-10">Profile Picture</div>
+                <div class="label"><div class="text-wrapper">Edit Your Profile!</div></div></body>
+              </form>
+              <div class="overlap-2">
+
+              </div>
+            </div>
+          </div>
+          <div class="naviation-bar">
+            <div class="links"><a href="/inkfluence/home/" div class="link">Home</a></div>
+            <div class="link2"><a href="/inkfluence/search/" div class="link">Search</a></div>
+            <div class="link3"><a href="/inkfluence/submit/" class="link">Submit</a></div>
+            <div class="logo-2">INKFLUENCE</div>
+            <div class="overlap-3">
+              <div class="background"></div>
+              <button id="logoutBtn" class="logout-button">
+                <a href="{% url 'logout' %}"><div class="text-wrapper-9">Logout</div></a>
+              </button>
+              <div class="background-3"></div>
+              <button id="profBtn" class="profile-button"><div class="text-wrapper-9">Profile</div></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    <script src="{% static 'inkfluence/js/button.js' %}"></script>
+  </body>
 </html>

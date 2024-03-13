@@ -16,14 +16,14 @@
 .profile-reader .overlap {
   position: relative;
   width: 1493px;
-  height: 1046px;
+  height: 1036px;
   left: -26px;
 }
 
 .profile-reader .ink-fluence {
   position: absolute;
   width: 1440px;
-  height: 394px;
+  height: 1024px;
   top: 0;
   left: 26px;
 }
@@ -32,7 +32,7 @@
   position: absolute;
   width: 1493px;
   height: 652px;
-  top: 394px;
+  top: 384px;
   left: 0;
   background-color: #d9d9d9;
   border-radius: 2px;
@@ -40,103 +40,13 @@
   border-color: #b19ba8;
 }
 
-.profile-reader .favourite-genres {
-  position: absolute;
-  width: 294px;
-  height: 523px;
-  top: 425px;
-  left: 1118px;
-  background-color: #ffffff;
-  border-radius: 20px;
-  overflow: hidden;
-  border: 1px solid;
-  border-color: #0000001a;
-}
-
-.profile-reader .search {
-  display: flex;
-  width: 270px;
-  height: 422px;
-  align-items: center;
-  position: absolute;
-  top: 75px;
-  left: 12px;
-}
-
-.profile-reader .search-input {
-  position: relative;
-  width: 270px;
-  height: 419px;
-  font-family: "Poppins-Regular", Helvetica;
-  font-weight: 400;
-  color: var(--gray);
-  font-size: 18px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.profile-reader .text-wrapper {
-  position: absolute;
-  width: 196px;
-  top: 36px;
-  left: 49px;
-  font-family: "Roboto-ExtraBold", Helvetica;
-  font-weight: 800;
-  color: #000000;
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.profile-reader .favourite-works {
-  position: absolute;
-  width: 521px;
-  height: 523px;
-  top: 425px;
-  left: 535px;
-  background-color: #ffffff;
-  border-radius: 20px;
-  overflow: hidden;
-  border: 1px solid;
-  border-color: #0000001a;
-}
-
-.profile-reader .div {
-  position: absolute;
-  width: 196px;
-  top: 34px;
-  left: 163px;
-  font-family: "Roboto-ExtraBold", Helvetica;
-  font-weight: 800;
-  color: #000000;
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.profile-reader .dreaming-of-electric {
-  position: absolute;
-  width: 295px;
-  top: 121px;
-  left: 113px;
-  font-family: "Roboto-ExtraBold", Helvetica;
-  font-weight: 800;
-  color: #000000;
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
 .profile-reader .about {
   position: absolute;
-  width: 361px;
-  height: 450px;
-  top: 552px;
-  left: 102px;
+  width: 550px;
+  height: 404px;
+  top: 570px;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: #ffffff;
   border-radius: 20px;
   overflow: hidden;
@@ -144,64 +54,49 @@
   border-color: #0000001a;
 }
 
-.profile-reader .bio-wrapper {
-  width: 290px;
-  height: 250px;
+.profile-reader .text-wrapper-3 {
   position: absolute;
-  top: 155px;
-  left: 33px;
-  border: none;
-  background: none;
-  font-family: "Poppins-Regular", Helvetica;
-  font-weight: 400;
-  color: var(--gray);
-  font-size: 18px;
-  letter-spacing: 0;
-  line-height: normal;
-  padding: 0;
-}
-
-.profile-reader .text-wrapper-2 {
-  position: absolute;
-  top: 122px;
+  top: 30px;
   left: 33px;
   font-family: "Roboto-ExtraBold", Helvetica;
   font-weight: 800;
-  color: #000000;
+  color: #b19ba8;
   font-size: 20px;
   letter-spacing: 0;
   line-height: normal;
   white-space: nowrap;
 }
 
-.profile-reader .name-wrapper {
-  display: flex;
-  width: 270px;
-  height: 46px;
-  align-items: center;
-  position: absolute;
-  top: 56px;
-  left: 33px;
-}
-
-.profile-reader .input {
-  position: relative;
-  width: 270px;
-  font-family: "Poppins-Regular", Helvetica;
-  font-weight: 400;
-  color: var(--gray);
-  font-size: 18px;
-  letter-spacing: 0;
-  line-height: normal;
-  background: transparent;
-  border: none;
-  padding: 0;
-}
-
-.profile-reader .text-wrapper-3 {
+.profile-reader .text-wrapper-4 {
   position: absolute;
   width: 74px;
-  top: 23px;
+  top: 120px;
+  left: 33px;
+  font-family: "Roboto-ExtraBold", Helvetica;
+  font-weight: 800;
+  color: #b19ba8;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.profile-reader .text-wrapper-8 {
+  position: absolute;
+  width: 500px;
+  top: 70px;
+  left: 33px;
+  font-family: "Roboto-ExtraBold", Helvetica;
+  font-weight: 800;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.profile-reader .text-wrapper-9 {
+  position: absolute;
+  width: 500px;
+  top: 160px;
   left: 33px;
   font-family: "Roboto-ExtraBold", Helvetica;
   font-weight: 800;
@@ -215,12 +110,39 @@
   position: absolute;
   width: 288px;
   height: 288px;
-  top: 245px;
-  left: 138px;
+  top: 240px;
+  left: 602px;
   background-color: #b9b9b9;
   border-radius: 30px;
   border: 3px solid;
   border-color: #b19ba8;
+}
+
+.profile-reader .edit-button {
+  all: unset;
+  box-sizing: border-box;
+  position: absolute;
+  width: 82px;
+  height: 31px;
+  top: 91px;
+  left: 1315px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.profile-reader .text-wrapper-6 {
+  position: absolute;
+  width: 49px;
+  height: 19px;
+  top: 7px;
+  left: 17px;
+  font-family: "Roboto-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #b19ba8;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 18.9px;
 }
 
 .profile-reader .naviation-bar {
@@ -334,7 +256,8 @@
   background-color: #d9d9d9;
 }
 
-.profile-reader .text-wrapper-4 {
+
+.profile-reader .text-wrapper-7 {
   position: absolute;
   width: 107px;
   height: 25px;
@@ -349,29 +272,21 @@
   line-height: 24.3px;
 }
 
-.profile-reader .edit-button {
-  all: unset;
-  box-sizing: border-box;
-  position: absolute;
-  width: 82px;
-  height: 31px;
-  top: 91px;
-  left: 1315px;
-  background-color: #ffffff;
-  border-radius: 5px;
+.profile-reader .text-wrapper,
+.profile-reader .text-wrapper-2,
+.profile-reader .text-wrapper-3,
+.profile-reader .text-wrapper-4,
+.profile-reader .text-wrapper-5,
+.profile-reader .text-wrapper-6,
+.profile-reader .text-wrapper-7,
+.profile-reader .text-wrapper-8,
+.profile-reader .text-wrapper-9,
+.profile-reader .text-wrapper-10 {
+  text-align: center;
+  left: 50%; /* Set left position to center align */
+  transform: translateX(-50%); /* Translate back half of the element's width to center it */
 }
 
-.profile-reader .text-wrapper-5 {
-  position: absolute;
-  width: 49px;
-  height: 19px;
-  top: 7px;
-  left: 17px;
-  font-family: "Roboto-SemiBold", Helvetica;
-  font-weight: 600;
-  color: #b19ba8;
-  font-size: 14px;
+.profile-reader .text-wrapper-3 {
   text-align: center;
-  letter-spacing: 0;
-  line-height: 18.9px;
 }

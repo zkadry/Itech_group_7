@@ -1,0 +1,355 @@
+.edit-profile {
+  background-color: #e2e2e2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.edit-profile .overlap-wrapper {
+  background-color: #e2e2e2;
+  width: 1440px;
+  height: 1024px;
+}
+
+.edit-profile .overlap {
+  position: relative;
+  height: 1024px;
+  background-image: url(./inkfluence/img/inkFluence.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.edit-profile .overlap-group {
+  position: absolute;
+  width: 580px;
+  height: 877px;
+  top: 98px;
+  left: 453px;
+}
+
+.edit-profile .shadow {
+  position: absolute;
+  top: 53%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  width: 748px;
+  height: 852px;
+  background-color: #000000;
+  border-radius: 60.87px;
+  overflow: hidden;
+}
+
+.edit-profile .edit-frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 748px;
+  height: 852px;
+  background-color: #ffffff;
+  border-radius: 60.87px;
+  overflow: hidden;
+}
+
+.edit-profile .update-button {
+  all: unset;
+  box-sizing: border-box;
+  position: absolute;
+  width: 267px;
+  height: 67px;
+  top: 734px;
+  left: 240px;
+  border-radius: 33.41px;
+  border: 1.67px solid;
+  border-color: #000000;
+}
+
+.edit-profile .text-wrapper-3 {
+  width: 258px;
+  height: 34px;
+  top: 13px;
+  left: 3px;
+  color: #000000;
+  font-size: 28.4px;
+  line-height: normal;
+  position: absolute;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+.edit-profile .bio-wrapper {
+  position: absolute;
+  width: 515px;
+  height: 210px;
+  top: 477px;
+  left: 115px;
+  background-color: #d9d9d9;
+  border-radius: 35.62px;
+}
+
+.edit-profile .bio {
+  width: 440px;
+  height: 190px;
+  position: relative;
+  top: 10px;
+  left: 40px;
+  border: none;
+  background: none;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--gray);
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  padding: 0;
+}
+
+.edit-profile .text-wrapper-5 {
+  position: absolute;
+  width: 339px;
+  top: 415px;
+  left: 203px;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #00000080;
+  font-size: 24.3px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 59.1px;
+  white-space: nowrap;
+}
+
+.edit-profile .name-wrapper {
+  position: absolute;
+  width: 415px;
+  height: 65px;
+  top: 340px;
+  left: 165px;
+  background-color: #d9d9d9;
+  border-radius: 35.62px;
+}
+
+.edit-profile .pic-wrapper-2 {
+  position: absolute;
+  width: 415px;
+  height: 65px;
+  top: 203px;
+  left: 165px;
+  background-color: #d9d9d9;
+  border-radius: 35.62px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.edit-profile .pic-wrapper-2 input[type="file"] {
+  margin-left: 80px;
+}
+
+.edit-profile .name {
+  height: 46px;
+  top: 10px;
+  left: 32px;
+  position: relative;
+  width: 349px;
+  border: none;
+  background: none;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--gray);
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  padding: 0;
+}
+
+.edit-profile .text-wrapper-7 {
+  position: absolute;
+  width: 339px;
+  top: 276px;
+  left: 203px;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #00000080;
+  font-size: 24.3px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 59.1px;
+  white-space: nowrap;
+}
+
+.edit-profile .text-wrapper-10 {
+  position: absolute;
+  width: 339px;
+  top: 140px;
+  left: 203px;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: grey;
+  font-size: 24.3px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 59.1px;
+  white-space: nowrap;
+}
+
+.edit-profile .overlap-2 {
+  position: absolute;
+  width: 146px;
+  height: 153px;
+  top: 20px;
+  left: 201px;
+}
+
+.edit-profile .naviation-bar {
+  position: absolute;
+  width: 1440px;
+  height: 64px;
+  top: 0;
+  left: 0;
+  background-color: #b19ba8;
+}
+
+.edit-profile .links {
+  position: absolute;
+  width: 51px;
+  height: 22px;
+  top: 21px;
+  left: 40px;
+}
+
+.edit-profile .link2 {
+  width: 58px;
+  left: 110px;
+  position: absolute;
+  height: 22px;
+  top: 21px;
+}
+
+.edit-profile .link3 {
+  width: px;
+  left: 190px;
+  position: absolute;
+  height: 22px;
+  top: 21px;
+}
+
+.edit-profile .link {
+  position: absolute;
+  height: 22px;
+  top: 0;
+  left: 0;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.edit-profile .logo-2 {
+  position: absolute;
+  top: 15px;
+  left: 655px;
+  font-family: "Yusei Magic-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.edit-profile .overlap-3 {
+  position: absolute;
+  width: 146px;
+  height: 48px;
+  top: 10px;
+  left: 1260px;
+}
+
+.edit-profile .background {
+  position: absolute;
+  width: 140px;
+  height: 40px;
+  top: 8px;
+  left: 6px;
+  background-color: #000000;
+  border-radius: 5px;
+} 
+
+.edit-profile .background-3 {
+  position: absolute;
+  width: 140px;
+  height: 40px;
+  top: 8px;
+  left: -156px;
+  background-color: #000000;
+  border-radius: 5px;
+}
+
+.edit-profile .profile-button {
+  position: absolute;
+  width: 140px;
+  height: 40px;
+  top: 0;
+  left: -160px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.edit-profile .logout-button {
+  position: absolute;
+  width: 140px;
+  height: 40px;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.edit-profile .text-wrapper-9 {
+  position: absolute;
+  width: 107px;
+  height: 25px;
+  top: 8px;
+  left: 17px;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #b19ba8;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 24.3px;
+}
+
+.label {
+  width: 611px;
+  height: 82px;
+}
+
+.label .text-wrapper {
+  position: fixed;
+  width: 611px;
+  top: 60px;
+  left: 60px;
+  -webkit-text-stroke: 5px #000000;
+  font-family: "Roboto-ExtraBold", Helvetica;
+  font-weight: 800;
+  color: #b19ba8;
+  font-size: 70px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 59.1px;
+}
+
+
+.logout-button:active,
+.update-button:active {
+  background-color: #d9d9d9;
+}
