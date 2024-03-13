@@ -127,14 +127,22 @@ def story_view(request):
         comments_objs = title_story.comments.all()
         comments = [obj.__dict__ for obj in comments_objs]
         story_dict.update({"comments": comments})
+        story_dict.update({"rate_avg": int(sum([c["rating"] for c in comments]) / len(comments))})
         story_dict.pop('_state', None)
+        # author info
+        profile = Profile.objects.filter(id=story_dict["author_id"]).first()
+        story_dict.update({"profile": profile})
         return render(request, 'storyPage.html', story_dict)
     elif author_story:
         story_dict = author_story.__dict__
         comments_objs = author_story.comments.all()
         comments = [obj.__dict__ for obj in comments_objs]
         story_dict.update({"comments": comments})
+        story_dict.update({"rate_avg": int(sum([c["rating"] for c in comments]) / len(comments))})
         story_dict.pop('_state', None)
+        # author info
+        profile = Profile.objects.filter(id=story_dict["author_id"]).first()
+        story_dict.update({"profile": profile})
         return render(request, 'storyPage.html', story_dict)
     else:
         return render(request, 'storyPage.html')
@@ -154,7 +162,11 @@ def comment_view(request, story_id):
         comments_objs = author_story.comments.all()
         comments = [obj.__dict__ for obj in comments_objs]
         story_dict.update({"comments": comments})
+        story_dict.update({"rate_avg": int(sum([c["rating"] for c in comments]) / len(comments))})
         story_dict.pop('_state', None)
+        # author info
+        profile = Profile.objects.filter(id=story_dict["author_id"]).first()
+        story_dict.update({"profile": profile})
         return render(request, 'storyPage.html', story_dict)
     else:
         return render(request, 'storyPage.html')

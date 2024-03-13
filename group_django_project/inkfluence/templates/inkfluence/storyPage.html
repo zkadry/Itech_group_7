@@ -96,24 +96,22 @@
 <!--            </div>-->
             <div class="story-info">
                 <div class="frame-wrapper">
-                    <div class="frame-2">
-                        <div class="star-wrapper"><img class="star-3"
-                                                       src="{% static 'inkfluence/img/Star-Defult.png' %}"/></div>
-                        <div class="star-wrapper"><img class="star-3"
-                                                       src="{% static 'inkfluence/img/Star-Defult.png' %}"/></div>
-                        <div class="star-wrapper"><img class="star-3"
-                                                       src="{% static 'inkfluence/img/Star-Defult.png' %}"/></div>
-                        <div class="star-wrapper"><img class="star-3"
-                                                       src="{% static 'inkfluence/img/Star-Defult.png' %}"/></div>
-                        <div class="star-wrapper"><img class="star-3"
-                                                       src="{% static 'inkfluence/img/Star-Defult.png' %}"/></div>
-                    </div>
+<!--                    <div class="frame-2">-->
+<!--                        <div class="star-wrapper"><img class="star-3"-->
+<!--                                                       src="{% static 'inkfluence/img/Star-Defult.png' %}"/></div>-->
+<!--                        <div class="star-wrapper"><img class="star-3"-->
+<!--                                                       src="{% static 'inkfluence/img/Star-Defult.png' %}"/></div>-->
+<!--                        <div class="star-wrapper"><img class="star-3"-->
+<!--                                                       src="{% static 'inkfluence/img/Star-Defult.png' %}"/></div>-->
+<!--                        <div class="star-wrapper"><img class="star-3"-->
+<!--                                                       src="{% static 'inkfluence/img/Star-Defult.png' %}"/></div>-->
+<!--                        <div class="star-wrapper"><img class="star-3"-->
+<!--                                                       src="{% static 'inkfluence/img/Star-Defult.png' %}"/></div>-->
+<!--                    </div>-->
                 </div>
-                <div class="text-wrapper-7">Rating</div>
+                <div class="text-wrapper-7">Rating: {{ rate_avg }}</div>
                 <div class="overlap-4">
-                    <div class="text-wrapper-8">Fantasy</div>
-                    <div class="text-wrapper-9">Genre</div>
-                    <div class="text-wrapper-10">Jane Doe</div>
+                    <div class="text-wrapper-10"><a href="/inkfluence/profile/">{{ profile.user.username }}</a></div>
                     <div class="text-wrapper-11">Author</div>
                     <img class="edit" src="{% static 'inkfluence/img/edit.png' %}"/>
                 </div>
