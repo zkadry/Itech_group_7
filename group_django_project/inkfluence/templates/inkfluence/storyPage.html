@@ -1,222 +1,134 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
+<head>
+    <meta charset="utf-8"/>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'inkfluence/css/styleguide.css' %}" />
-    <link rel="stylesheet" href="{% static 'inkfluence/css/storyPage.css' %}" />
-  </head>
-  <body>
-    <div class="story-page">
-      <div class="overlap-wrapper">
+    <link rel="stylesheet" href="{% static 'inkfluence/css/styleguide.css' %}"/>
+    <link rel="stylesheet" href="{% static 'inkfluence/css/storyPage.css' %}"/>
+</head>
+<body>
+<div class="story-page">
+    <div class="overlap-wrapper">
         <div class="overlap">
-          <img class="inkfluence" src="{% static 'inkfluence/img/inkFluence.png' %}" />
-          <img class="img" src="{% static 'inkfluence/img/inkFluence.png' %}" />
-          <img class="inkfluence-2" src="{% static 'inkfluence/img/inkFluence.png' %}" />
-          <button class="delete-button"><div class="text-wrapper">Delete</div></button>
-          <div class="comment-window">
-            <div class="overlap-group">
-              <div class="shadow"></div>
-              <div class="coment-frame"></div>
-              <p class="share-your-thought">Loved the story? Share your thoughts!</p>
-              <div class="leave-a-comment">Leave a comment below</div>
-              <div class="comment-frame"><textarea class="comment-input" placeholder="Leave a comment..." type="text"></textarea></div>
-              <img class="comment" src="{% static 'inkfluence/img/comment-2.png' %}" />
-              <img class="comment-2" src="{% static 'inkfluence/img/comment-2.png' %}" />
-              <img class="comment-3" src="{% static 'inkfluence/img/comment-3.png' %}" />
-              <img class="comment-4" src="{% static 'inkfluence/img/comment-3.png' %}" />
-              <div class="star-rating">
-                <div class="div">Rate</div>
-                <div class="frame">
-                  <div class="star-wrapper"><img class="star-2" src="{% static 'inkfluence/img/Star-Defult.png' %}" /></div>
-                  <div class="star-wrapper"><img class="star-2" src="{% static 'inkfluence/img/Star-Defult.png' %}" /></div>
-                  <div class="star-wrapper"><img class="star-2" src="{% static 'inkfluence/img/Star-Defult.png' %}" /></div>
-                  <div class="star-wrapper"><img class="star-2" src="{% static 'inkfluence/img/Star-Defult.png' %}" /></div>
-                  <div class="star-wrapper"><img class="star-2" src="{% static 'inkfluence/img/Star-Defult.png' %}" /></div>
+            <img class="inkfluence" src="{% static 'inkfluence/img/inkFluence.png' %}"/>
+            <img class="img" src="{% static 'inkfluence/img/inkFluence.png' %}"/>
+            <img class="inkfluence-2" src="{% static 'inkfluence/img/inkFluence.png' %}"/>
+<!--            <button class="delete-button">-->
+<!--                <div class="text-wrapper">Delete</div>-->
+<!--            </button>-->
+            <div class="comment-window">
+                <div class="overlap-group">
+                    <div class="shadow"></div>
+                    <div class="coment-frame"></div>
+
+                    <form method="post" action="/inkfluence/comment/{{id}}">
+                        {% csrf_token %}
+                        <p class="share-your-thought">Loved the story? Share your thoughts!</p>
+                        <div class="leave-a-comment">Leave a comment below</div>
+                        <div class="comment-frame"><textarea class="comment-input" placeholder="Leave a comment..."
+                                                             type="text" required="true" name="comment"></textarea>
+                        </div>
+                        <img class="comment" src="{% static 'inkfluence/img/comment-2.png' %}"/>
+                        <img class="comment-2" src="{% static 'inkfluence/img/comment-2.png' %}"/>
+                        <img class="comment-3" src="{% static 'inkfluence/img/comment-3.png' %}"/>
+                        <img class="comment-4" src="{% static 'inkfluence/img/comment-3.png' %}"/>
+                        <div class="star-rating">
+                            <div >Rate(From 1 to 10(excellent)) <input type="text" name="rating" required="true"></div>
+                            <div class="frame">
+<!--                                <div class="star-wrapper"><img class="star-2"-->
+<!--                                                               src="{% static 'inkfluence/img/Star-Defult.png' %}"/>-->
+<!--                                </div>-->
+<!--                                <div class="star-wrapper"><img class="star-2"-->
+<!--                                                               src="{% static 'inkfluence/img/Star-Defult.png' %}"/>-->
+<!--                                </div>-->
+<!--                                <div class="star-wrapper"><img class="star-2"-->
+<!--                                                               src="{% static 'inkfluence/img/Star-Defult.png' %}"/>-->
+<!--                                </div>-->
+<!--                                <div class="star-wrapper"><img class="star-2"-->
+<!--                                                               src="{% static 'inkfluence/img/Star-Defult.png' %}"/>-->
+<!--                                </div>-->
+<!--                                <div class="star-wrapper"><img class="star-2"-->
+<!--                                                               src="{% static 'inkfluence/img/Star-Defult.png' %}"/>-->
+<!--                                </div>-->
+
+                            </div>
+                        </div>
+                        <button class="submit-button">
+                            <div class="text-wrapper-2">Submit</div>
+                        </button>
+                    </form>
                 </div>
-              </div>
-              <button class="submit-button"><div class="text-wrapper-2">Submit</div></button>
             </div>
-          </div>
-          <div class="comments-frame"><div class="text-wrapper-3">Comments</div></div>
-          <div class="background"></div>
-          <div class="big-button"><div class="text-wrapper-4">Next Chapter</div></div>
-          <div class="background-2"></div>
-          <div class="div-wrapper"><div class="text-wrapper-4">Previous Chapter</div></div>
-          <div class="feedback-frame">
-            <div class="text-wrapper-5">Leave Feedback</div>
-            <p class="liked-what-you-read">
-              Liked what you read?<br /><br />Let the author know what you thought in the comment section below!
-            </p>
-            <div class="overlap-2">
-              <p class="p">You can also add this story to your favourites!</p>
-              <img class="heart" src="{% static 'inkfluence/img/heart.png' %}" />
+            <div class="comments-frame">
+                <div class="text-wrapper-3">Comments</br></br>
+                    {% for comment in comments %}
+                    {{ comment.body }}</br>
+                    {% endfor %}
+                </div>
             </div>
-          </div>
-          <div class="chapter-frame">
-            <p class="chapter-chapter">
-              Chapter 1<br />Chapter 2<br />Chapter 3<br />Chapter 4<br />Chapter 5<br />Chapter 6<br />Chapter 7<br />Chapter
-              8<br />Chapter 9<br />Chapter 10
-            </p>
-            <div class="overlap-3">
-              <div class="text-wrapper-6">Chapters</div>
-              <img class="edit" src="{% static 'inkfluence/img/image.png' %}" />
+<!--            <div class="background"></div>-->
+<!--            <div class="big-button">-->
+<!--                <div class="text-wrapper-4">Next Chapter</div>-->
+<!--            </div>-->
+<!--            <div class="background-2"></div>-->
+<!--            <div class="div-wrapper">-->
+<!--                <div class="text-wrapper-4">Previous Chapter</div>-->
+<!--            </div>-->
+            <div class="feedback-frame">
+                <div class="text-wrapper-5">Leave Feedback</div>
+                <p class="liked-what-you-read">
+                    Liked what you read?<br/><br/>Let the author know what you thought in the comment section below!
+                </p>
+                <div class="overlap-2">
+                    <p class="p">You can also add this story to your favourites!</p>
+                    <img class="heart" src="{% static 'inkfluence/img/heart.png' %}"/>
+                </div>
             </div>
-          </div>
-          <div class="story-info">
-            <div class="frame-wrapper">
-              <div class="frame-2">
-                <div class="star-wrapper"><img class="star-3" src="{% static 'inkfluence/img/Star-Defult.png' %}" /></div>
-                <div class="star-wrapper"><img class="star-3" src="{% static 'inkfluence/img/Star-Defult.png' %}" /></div>
-                <div class="star-wrapper"><img class="star-3" src="{% static 'inkfluence/img/Star-Defult.png' %}" /></div>
-                <div class="star-wrapper"><img class="star-3" src="{% static 'inkfluence/img/Star-Defult.png' %}" /></div>
-                <div class="star-wrapper"><img class="star-3" src="{% static 'inkfluence/img/Star-Defult.png' %}" /></div>
-              </div>
+<!--            <div class="chapter-frame">-->
+<!--                <p class="chapter-chapter">-->
+<!--                    Chapter 1<br/>Chapter 2<br/>Chapter 3<br/>Chapter 4<br/>Chapter 5<br/>Chapter 6<br/>Chapter 7<br/>Chapter-->
+<!--                    8<br/>Chapter 9<br/>Chapter 10-->
+<!--                </p>-->
+<!--                <div class="overlap-3">-->
+<!--                    <div class="text-wrapper-6">Chapters</div>-->
+<!--                    <img class="edit" src="{% static 'inkfluence/img/image.png' %}"/>-->
+<!--                </div>-->
+<!--            </div>-->
+            <div class="story-info">
+                <div class="frame-wrapper">
+<!--                    <div class="frame-2">-->
+<!--                        <div class="star-wrapper"><img class="star-3"-->
+<!--                                                       src="{% static 'inkfluence/img/Star-Defult.png' %}"/></div>-->
+<!--                        <div class="star-wrapper"><img class="star-3"-->
+<!--                                                       src="{% static 'inkfluence/img/Star-Defult.png' %}"/></div>-->
+<!--                        <div class="star-wrapper"><img class="star-3"-->
+<!--                                                       src="{% static 'inkfluence/img/Star-Defult.png' %}"/></div>-->
+<!--                        <div class="star-wrapper"><img class="star-3"-->
+<!--                                                       src="{% static 'inkfluence/img/Star-Defult.png' %}"/></div>-->
+<!--                        <div class="star-wrapper"><img class="star-3"-->
+<!--                                                       src="{% static 'inkfluence/img/Star-Defult.png' %}"/></div>-->
+<!--                    </div>-->
+                </div>
+                <div class="text-wrapper-7">Rating: {{ rate_avg }}</div>
+                <div class="overlap-4">
+                    <div class="text-wrapper-10"><a href="/inkfluence/profile/">{{ profile.user.username }}</a></div>
+                    <div class="text-wrapper-11">Author</div>
+                    <img class="edit" src="{% static 'inkfluence/img/edit.png' %}"/>
+                </div>
             </div>
-            <div class="text-wrapper-7">Rating</div>
-            <div class="overlap-4">
-              <div class="text-wrapper-8">Fantasy</div>
-              <div class="text-wrapper-9">Genre</div>
-              <div class="text-wrapper-10">Jane Doe</div>
-              <div class="text-wrapper-11">Author</div>
-              <img class="edit" src="{% static 'inkfluence/img/edit.png' %}" />
+            <div class="story-frame">
+                <p class="story">
+                    {{ content }}
+                </p>
+                <!--            <div class="title">And so it begins...</div>-->
+                <div class="title">{{ title }}</div>
+<!--                <div class="chapter">Chapter One</div>-->
+<!--                <button class="edit-button">-->
+<!--                    <div class="text-wrapper-12">Edit</div>-->
+<!--                </button>-->
             </div>
-          </div>
-          <div class="story-frame">
-            <p class="story">
-              Lorem ipsum dolor sit amet consectetur. In fringilla rhoncus eget porta. Duis amet consectetur orci quam
-              sit pharetra. Tempus vestibulum enim consectetur scelerisque cras. Etiam leo consectetur enim id tempor
-              diam cursus egestas euismod. Ornare maecenas elementum dolor integer amet dictumst magna. Dui eu aliquam
-              mi quis lectus convallis sagittis. Nulla risus rhoncus aliquet id congue. Amet pellentesque suspendisse
-              amet aliquam. Ac leo mi hendrerit porttitor pulvinar senectus lobortis aliquam ultrices. Magna magna arcu
-              nunc quis mi ac nunc. Scelerisque cras enim urna est tristique. Vel mollis ultricies dolor erat tellus
-              lobortis lacus non. Morbi fermentum mauris suscipit velit. Sed risus pulvinar pellentesque duis bibendum
-              tellus id vestibulum non. Dui habitant dapibus lacus ultrices faucibus tempus vitae. Lacus at posuere
-              vitae elit viverra non. Auctor nunc ultrices condimentum vitae fames quis eget netus. Vel integer habitant
-              etiam fringilla duis egestas lobortis nec nunc. A sed sed turpis nunc amet. Nec id dignissim vulputate non
-              ullamcorper dolor id blandit. Aenean molestie id lacus varius eget in enim sagittis elit. Vitae tellus sed
-              cursus nisi morbi sagittis vehicula. Scelerisque vulputate proin non purus a. Nunc nibh sollicitudin
-              pellentesque mauris laoreet risus et. Morbi tortor eu adipiscing suspendisse justo sapien ut dui. Leo
-              turpis faucibus suspendisse commodo placerat in duis est. Sit semper a mattis sem ultrices sagittis nec
-              dictum risus. Sit laoreet elementum ultrices enim id sed accumsan eget viverra. Quis volutpat elit nunc
-              fringilla. Orci lacinia urna sit montes nibh massa et tellus integer. Urna dictum convallis suspendisse
-              morbi. Aenean proin natoque congue non pulvinar enim sed. Aliquet orci diam feugiat suspendisse pretium.
-              Donec nunc ultricies pulvinar sollicitudin porta at. Sed a nunc at nisi faucibus neque blandit. Id
-              condimentum porta quis ac amet varius facilisis. <br /><br />Tortor vel in lobortis quam eget. At lorem
-              ullamcorper nunc donec. Rhoncus neque sed a tellus ac etiam vel. Aliquam ut amet magna orci. Malesuada
-              tempor diam ultrices faucibus vitae neque. In porttitor porttitor sed varius vitae massa dignissim quam
-              eget. Morbi praesent vel et odio arcu. Rhoncus porttitor cursus adipiscing vitae. Augue et tellus pretium
-              erat eu. A tristique ac enim vel elementum sit et. Urna aliquet porta sagittis turpis dui arcu. Aliquam
-              fermentum ornare orci urna sed ut aliquam nibh egestas. Nam quis senectus ut enim venenatis ultrices proin
-              nam. Enim viverra dapibus nullam proin quis. Ac eu amet purus integer eu. Porttitor nibh auctor donec
-              augue purus laoreet lorem id. Semper erat pharetra nisi lacus erat enim malesuada. In dolor volutpat arcu
-              vel. Arcu risus sollicitudin magna enim arcu lectus sit pulvinar mauris. Sit dictum laoreet sed et mi
-              consectetur semper. Enim faucibus sed duis tellus at pretium feugiat suspendisse proin. Blandit molestie
-              elementum mus tortor sed habitasse. Leo eu volutpat lorem in erat est sollicitudin amet. Nulla diam
-              bibendum ante odio nullam malesuada pulvinar ipsum. Diam orci semper nulla in nec. Leo dolor mattis nibh
-              nunc. Laoreet iaculis morbi malesuada venenatis. Proin nunc enim scelerisque habitasse amet et.
-              Ullamcorper semper scelerisque elit quam ultricies mauris. At et posuere tristique arcu consequat. Morbi
-              lacinia magna eget eget iaculis volutpat sollicitudin neque. Ut sollicitudin quis erat ultrices viverra mi
-              ac sagittis diam. Facilisi imperdiet egestas augue cursus ullamcorper adipiscing. Eu sagittis gravida
-              lectus pharetra. Purus suspendisse enim amet non in ipsum habitant. Tristique elementum est odio purus. At
-              tempus facilisis arcu sapien elit sit. Nulla id etiam arcu ullamcorper malesuada pharetra. Hac at felis eu
-              dictumst porttitor amet scelerisque ut. Egestas quam sed semper fames tortor ac. Ac ullamcorper adipiscing
-              vitae pellentesque ipsum. Tristique adipiscing nunc risus vestibulum. Tincidunt sed aliquet rhoncus at
-              pellentesque mattis a diam lobortis. Varius iaculis mi ante urna nulla ac ut. In viverra integer at nunc
-              sociis fermentum amet laoreet. <br /><br />Congue ullamcorper tristique aenean sed massa. Nibh vitae eget
-              diam vestibulum sem gravida vulputate vitae. Ac vel ultricies velit semper. Massa cras sed a ligula donec.
-              Dis porta velit blandit commodo amet nisl. Vitae nibh volutpat nec massa in arcu sit. Amet et urna enim
-              metus faucibus potenti in risus quam. Nunc pellentesque condimentum nunc pellentesque eget blandit. In
-              urna fermentum ornare aliquam phasellus velit ut commodo dui. Et eget sollicitudin arcu aliquam morbi
-              mauris habitasse viverra. Magnis praesent justo sit massa viverra augue. Augue ipsum facilisis at orci.
-              Amet mi imperdiet vel venenatis blandit vestibulum quisque phasellus bibendum. Nunc risus a velit
-              adipiscing gravida massa risus mauris facilisi. Lobortis nisi ut sed integer duis turpis sollicitudin nibh
-              sit. Dapibus nisl aliquam elit lectus nulla egestas. Adipiscing arcu tellus dictum massa auctor. Id semper
-              sit nam fermentum proin. Urna eu mauris cras diam ligula purus pretium tincidunt lectus. Consectetur
-              turpis eu purus sit aliquam hac aliquet diam. Id nisl cursus fusce velit ullamcorper aenean mi risus. Diam
-              sed congue odio tortor ut. Massa pellentesque massa magnis amet. Mauris vel accumsan sed semper at massa
-              varius. Elit a sed facilisis ultrices aenean tincidunt malesuada. Quis non rhoncus et laoreet sem metus
-              feugiat vel tristique. Amet suspendisse tellus ornare ligula vehicula diam semper dignissim enim. Sapien
-              nunc mauris cras in. Condimentum sem quis porttitor phasellus eget aliquam congue pellentesque. Vitae quam
-              erat adipiscing aliquam vel elementum. Lacus nisi blandit orci habitasse facilisi facilisi. Vivamus
-              adipiscing lorem duis velit. Eget interdum vel mauris imperdiet. Neque pellentesque nullam pharetra proin
-              nunc viverra. Sed nisl lobortis enim scelerisque. Volutpat pellentesque cras non dui urna non. Elementum
-              purus sed vitae non augue urna eu elementum arcu. Volutpat nascetur at ut vulputate accumsan. Cursus magna
-              pharetra nibh adipiscing sed vitae mauris amet. Id tempor leo ultrices ac tellus molestie habitasse
-              volutpat sed. Condimentum et consectetur maecenas libero. Non vel cras ac in lorem. Vel ultricies eget sit
-              sed massa enim dolor. Cursus enim bibendum arcu sit. Diam cursus enim augue vel tincidunt nulla quam nisl.
-              Aenean ac amet nec pharetra euismod vulputate nisi iaculis. Viverra a elit quisque vel sit ornare iaculis.
-              Elementum cum amet lorem sed tortor dolor amet vulputate. Arcu sit sed purus iaculis cursus nunc et nisl
-              sit. Vulputate potenti ullamcorper semper sed ultricies. Dictum ante viverra amet eget.<br /><br />Lorem
-              ipsum dolor sit amet consectetur. In fringilla rhoncus eget porta. Duis amet consectetur orci quam sit
-              pharetra. Tempus vestibulum enim consectetur scelerisque cras. Etiam leo consectetur enim id tempor diam
-              cursus egestas euismod. Ornare maecenas elementum dolor integer amet dictumst magna. Dui eu aliquam mi
-              quis lectus convallis sagittis. Nulla risus rhoncus aliquet id congue. Amet pellentesque suspendisse amet
-              aliquam. Ac leo mi hendrerit porttitor pulvinar senectus lobortis aliquam ultrices. Magna magna arcu nunc
-              quis mi ac nunc. Scelerisque cras enim urna est tristique. Vel mollis ultricies dolor erat tellus lobortis
-              lacus non. Morbi fermentum mauris suscipit velit. Sed risus pulvinar pellentesque duis bibendum tellus id
-              vestibulum non. Dui habitant dapibus lacus ultrices faucibus tempus vitae. Lacus at posuere vitae elit
-              viverra non. Auctor nunc ultrices condimentum vitae fames quis eget netus. Vel integer habitant etiam
-              fringilla duis egestas lobortis nec nunc. A sed sed turpis nunc amet. Nec id dignissim vulputate non
-              ullamcorper dolor id blandit. Aenean molestie id lacus varius eget in enim sagittis elit. Vitae tellus sed
-              cursus nisi morbi sagittis vehicula. Scelerisque vulputate proin non purus a. Nunc nibh sollicitudin
-              pellentesque mauris laoreet risus et. Morbi tortor eu adipiscing suspendisse justo sapien ut dui. Leo
-              turpis faucibus suspendisse commodo placerat in duis est. Sit semper a mattis sem ultrices sagittis nec
-              dictum risus. Sit laoreet elementum ultrices enim id sed accumsan eget viverra. Quis volutpat elit nunc
-              fringilla. Orci lacinia urna sit montes nibh massa et tellus integer. Urna dictum convallis suspendisse
-              morbi. Aenean proin natoque congue non pulvinar enim sed. Aliquet orci diam feugiat suspendisse pretium.
-              Donec nunc ultricies pulvinar sollicitudin porta at. Sed a nunc at nisi faucibus neque blandit. Id
-              condimentum porta quis ac amet varius facilisis. <br /><br />Tortor vel in lobortis quam eget. At lorem
-              ullamcorper nunc donec. Rhoncus neque sed a tellus ac etiam vel. Aliquam ut amet magna orci. Malesuada
-              tempor diam ultrices faucibus vitae neque. In porttitor porttitor sed varius vitae massa dignissim quam
-              eget. Morbi praesent vel et odio arcu. Rhoncus porttitor cursus adipiscing vitae. Augue et tellus pretium
-              erat eu. A tristique ac enim vel elementum sit et. Urna aliquet porta sagittis turpis dui arcu. Aliquam
-              fermentum ornare orci urna sed ut aliquam nibh egestas. Nam quis senectus ut enim venenatis ultrices proin
-              nam. Enim viverra dapibus nullam proin quis. Ac eu amet purus integer eu. Porttitor nibh auctor donec
-              augue purus laoreet lorem id. Semper erat pharetra nisi lacus erat enim malesuada. In dolor volutpat arcu
-              vel. Arcu risus sollicitudin magna enim arcu lectus sit pulvinar mauris. Sit dictum laoreet sed et mi
-              consectetur semper. Enim faucibus sed duis tellus at pretium feugiat suspendisse proin. Blandit molestie
-              elementum mus tortor sed habitasse. Leo eu volutpat lorem in erat est sollicitudin amet. Nulla diam
-              bibendum ante odio nullam malesuada pulvinar ipsum. Diam orci semper nulla in nec. Leo dolor mattis nibh
-              nunc. Laoreet iaculis morbi malesuada venenatis. Proin nunc enim scelerisque habitasse amet et.
-              Ullamcorper semper scelerisque elit quam ultricies mauris. At et posuere tristique arcu consequat. Morbi
-              lacinia magna eget eget iaculis volutpat sollicitudin neque. Ut sollicitudin quis erat ultrices viverra mi
-              ac sagittis diam. Facilisi imperdiet egestas augue cursus ullamcorper adipiscing. Eu sagittis gravida
-              lectus pharetra. Purus suspendisse enim amet non in ipsum habitant. Tristique elementum est odio purus. At
-              tempus facilisis arcu sapien elit sit. Nulla id etiam arcu ullamcorper malesuada pharetra. Hac at felis eu
-              dictumst porttitor amet scelerisque ut. Egestas quam sed semper fames tortor ac. Ac ullamcorper adipiscing
-              vitae pellentesque ipsum. Tristique adipiscing nunc risus vestibulum. Tincidunt sed aliquet rhoncus at
-              pellentesque mattis a diam lobortis. Varius iaculis mi ante urna nulla ac ut. In viverra integer at nunc
-              sociis fermentum amet laoreet. <br /><br />Congue ullamcorper tristique aenean sed massa. Nibh vitae eget
-              diam vestibulum sem gravida vulputate vitae. Ac vel ultricies velit semper. Massa cras sed a ligula donec.
-              Dis porta velit blandit commodo amet nisl. Vitae nibh volutpat nec massa in arcu sit. Amet et urna enim
-              metus faucibus potenti in risus quam. Nunc pellentesque condimentum nunc pellentesque eget blandit. In
-              urna fermentum ornare aliquam phasellus velit ut commodo dui. Et eget sollicitudin arcu aliquam morbi
-              mauris habitasse viverra. Magnis praesent justo sit massa viverra augue. Augue ipsum facilisis at orci.
-              Amet mi imperdiet vel venenatis blandit vestibulum quisque phasellus bibendum. Nunc risus a velit
-              adipiscing gravida massa risus mauris facilisi. Lobortis nisi ut sed integer duis turpis sollicitudin nibh
-              sit. Dapibus nisl aliquam elit lectus nulla egestas. Adipiscing arcu tellus dictum massa auctor. Id semper
-              sit nam fermentum proin. Urna eu mauris cras diam ligula purus pretium tincidunt lectus. Consectetur
-              turpis eu purus sit aliquam hac aliquet diam. Id nisl cursus fusce velit ullamcorper aenean mi risus. Diam
-              sed congue odio tortor ut. Massa pellentesque massa magnis amet. Mauris vel accumsan sed semper at massa
-              varius. Elit a sed facilisis ultrices aenean tincidunt malesuada. Quis non rhoncus et laoreet sem metus
-              feugiat vel tristique. Amet suspendisse tellus ornare ligula vehicula diam semper dignissim enim. Sapien
-              nunc mauris cras in. Condimentum sem quis porttitor phasellus eget aliquam congue pellentesque. Vitae quam
-              erat adipiscing aliquam vel elementum. Lacus nisi blandit orci habitasse facilisi facilisi. Vivamus
-              adipiscing lorem duis velit. Eget interdum vel mauris imperdiet. Neque pellentesque nullam pharetra proin
-              nunc viverra. Sed nisl lobortis enim scelerisque. Volutpat pellentesque cras non dui urna non. Elementum
-              purus sed vitae non augue urna eu elementum arcu. Volutpat nascetur at ut vulputate accumsan. Cursus magna
-              pharetra nibh adipiscing sed vitae mauris amet. Id tempor leo ultrices ac tellus molestie habitasse
-              volutpat sed. Condimentum et consectetur maecenas libero. Non vel cras ac in lorem. Vel ultricies eget sit
-              sed massa enim dolor. Cursus enim bibendum arcu sit. Diam cursus enim augue vel tincidunt nulla quam nisl.
-              Aenean ac amet nec pharetra euismod vulputate nisi iaculis. Viverra a elit quisque vel sit ornare iaculis.
-              Elementum cum amet lorem sed tortor dolor amet vulputate. Arcu sit sed purus iaculis cursus nunc et nisl
-              sit. Vulputate potenti ullamcorper semper sed ultricies. Dictum ante viverra amet eget.
-            </p>
-            <div class="title">And so it begins...</div>
-            <div class="chapter">Chapter One</div>
-            <button class="edit-button"><div class="text-wrapper-12">Edit</div></button>
-          </div>
+
+
           <div class="naviation-bar">
             <div class="links"><a href="/inkfluence/home/" div class="link">Home</a></div>
             <div class="link2"><a href="/inkfluence/search/" div class="link">Search</a></div>
@@ -229,11 +141,11 @@
               </button>>
               <div class="background-3"></div>
               <button id="profBtn" class="profile-button"><div class="text-wrapper-13">Profile</div></button>
+
             </div>
-          </div>
         </div>
-      </div>
-        </div>
-    <script src="{% static 'inkfluence/js/navbar.js' %}"></script>
-  </body>
+    </div>
+</div>
+<script src="{% static 'inkfluence/js/navbar.js' %}"></script>
+</body>
 </html>
