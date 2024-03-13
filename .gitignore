@@ -1,6 +1,7 @@
 env/
 db.sqlite3
 __pycache__/
+.DS_Store
 *.pyc
 /.idea/Itech_group_7.iml
 /.idea/.gitignore
@@ -8,3 +9,4 @@ __pycache__/
 /.idea/modules.xml
 /.idea/inspectionProfiles/profiles_settings.xml
 /.idea/vcs.xml
+*.key

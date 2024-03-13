@@ -40,7 +40,7 @@
   border-color: #0000001a;
 }
 
-.search-page .most-popular-frame {
+.search-page .results-frame {
   position: absolute;
   width: 1104px;
   height: 793px;
@@ -78,7 +78,7 @@
   align-items: center;
   gap: 6px;
   padding: 0px 8px;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   background-color: #ffffff;
@@ -87,9 +87,88 @@
   box-shadow: var(--shadow-3);
 }
 
+.search-page .form-inline {
+  display: flex;
+  align-items: center;
+  width: 1047px;
+}
+
+.search-page .form-group {
+  flex-grow: 1;
+  margin-right: 10px; /* Adjust the margin between input and button */
+  justify-content: center;
+}
+
+.search-page .form-control {
+  width: 95%; /* Take up all available space */
+  height: 35px;
+  font-size: 20px;
+  margin-left: 20px;
+  border: none;
+}
+
+.search-page .form-control::placeholder {
+  font-size: 20px; /* Adjust the font size as needed */
+}
+
+.search-page .btn {
+  margin-top: 10px;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+}
+
+.search-page .button-container {
+  margin-left: 20px; /* Adjust as needed */
+  margin-bottom: 10px;
+}
+
+.title-container {
+  background-color: #ffffff; /* Set background color to white */
+  border: 1px solid #000000; /* Add a black border */
+  border-radius: 10px; /* Add border radius for rounded corners */
+  padding: 0; /* Add padding around the container */
+  font-family: "Roboto-Regular", Helvetica;
+  text-align: center; /* Center the text */
+  color: grey;
+  margin: 10px;
+  margin-bottom: 20px; /* Add some space below the title */
+  margin-right: 400px;
+  margin-left: 400px;
+}
+
+.results-container {
+  /* Set background color to white */
+  border: 1px; /* Add a black border */
+  border-radius: 10px; /* Add border radius for rounded corners */
+  padding: 20px; /* Add padding to the container */
+  font-family: "Roboto-Regular", Helvetica;
+
+  max-height: 593px; /* Set maximum height for scrolling */
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds container height */
+  margin: 10px;
+}
+
+.list-group-item-heading a {
+  color: #b19ba8; /* Change the color to your desired color */
+  text-decoration: underline; /* Add underline effect */
+}
+
+.list-group-item-heading a:hover {
+  color: grey; /* Change the color on hover */
+}
+
+.list-group-item {
+  margin-bottom: 20px; /* Add bottom margin to separate each result */
+  padding: 20px; /* Add padding around each result */
+  background-color: white; /* Set background color to white */
+  border-radius: 10px; /* Add border radius for rounded corners */
+  border: 1px solid #ccc; /* Add border to create the white frame */
+}
+
 .search-page .img {
   position: relative;
-  width: 44px;
+  width: 40px;
   height: 44px;
   object-fit: cover;
 }
@@ -136,7 +215,7 @@
 
 .search-page .link3 {
   width: px;
-  left: 1156px;
+  left: 190px;
   position: absolute;
   height: 22px;
   top: 21px;
@@ -184,6 +263,16 @@
   left: 6px;
   background-color: #000000;
   border-radius: 5px;
+} 
+
+.search-page .background-3 {
+  position: absolute;
+  width: 140px;
+  height: 40px;
+  top: 8px;
+  left: -156px;
+  background-color: #000000;
+  border-radius: 5px;
 }
 
 .search-page .profile-button {
@@ -191,9 +280,23 @@
   width: 140px;
   height: 40px;
   top: 0;
+  left: -160px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.search-page .logout-button {
+  position: absolute;
+  width: 140px;
+  height: 40px;
+  top: 0;
   left: 0;
   background-color: #ffffff;
   border-radius: 5px;
+}
+
+.logout-button:active {
+  background-color: #d9d9d9;
 }
 
 .search-page .text-wrapper {
