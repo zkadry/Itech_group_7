@@ -16,6 +16,6 @@ urlpatterns = [
 
     path('story_submission/', views.story_submission_view, name='story_submission'),
     path('story/', views.story_view, name='story'),
-    path('comment/', views.comment_view, name='comment'),
+    path('comment/<str:story_title>/', views.comment_view, name='comment'),
 ]
 
