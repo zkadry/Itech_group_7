@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8"/>
     {% load static %}
@@ -13,44 +13,32 @@
             <img class="inkfluence" src="{% static 'inkfluence/img/inkFluence.png' %}"/>
             <img class="img" src="{% static 'inkfluence/img/inkFluence.png' %}"/>
             <img class="inkfluence-2" src="{% static 'inkfluence/img/inkFluence.png' %}"/>
-<!--            <button class="delete-button">-->
-<!--                <div class="text-wrapper">Delete</div>-->
-<!--            </button>-->
+
+            {% for message in messages %}
+            <div class="alert {{ message.tags }}">
+                {{ message }}
+            </div>
+            {% endfor %}
+
             <div class="comment-window">
                 <div class="overlap-group">
                     <div class="shadow"></div>
                     <div class="coment-frame"></div>
-
-                    <form method="post" action="/inkfluence/comment/{{id}}">
+                    <form method="post" action="{% url 'comment' story_title=title %}">
                         {% csrf_token %}
                         <p class="share-your-thought">Loved the story? Share your thoughts!</p>
                         <div class="leave-a-comment">Leave a comment below</div>
-                        <div class="comment-frame"><textarea class="comment-input" placeholder="Leave a comment..."
-                                                             type="text" required="true" name="comment"></textarea>
+                        <div class="comment-frame">
+                            <textarea class="comment-input" placeholder="Leave a comment..."
+                                      required="true" name="comment"></textarea>
                         </div>
                         <img class="comment" src="{% static 'inkfluence/img/comment-2.png' %}"/>
                         <img class="comment-2" src="{% static 'inkfluence/img/comment-2.png' %}"/>
                         <img class="comment-3" src="{% static 'inkfluence/img/comment-3.png' %}"/>
                         <img class="comment-4" src="{% static 'inkfluence/img/comment-3.png' %}"/>
                         <div class="star-rating">
-                            <div >Rate(From 1 to 10(excellent)) <input type="text" name="rating" required="true"></div>
-                            <div class="frame">
-<!--                                <div class="star-wrapper"><img class="star-2"-->
-<!--                                                               src="{% static 'inkfluence/img/Star-Defult.png' %}"/>-->
-<!--                                </div>-->
-<!--                                <div class="star-wrapper"><img class="star-2"-->
-<!--                                                               src="{% static 'inkfluence/img/Star-Defult.png' %}"/>-->
-<!--                                </div>-->
-<!--                                <div class="star-wrapper"><img class="star-2"-->
-<!--                                                               src="{% static 'inkfluence/img/Star-Defult.png' %}"/>-->
-<!--                                </div>-->
-<!--                                <div class="star-wrapper"><img class="star-2"-->
-<!--                                                               src="{% static 'inkfluence/img/Star-Defult.png' %}"/>-->
-<!--                                </div>-->
-<!--                                <div class="star-wrapper"><img class="star-2"-->
-<!--                                                               src="{% static 'inkfluence/img/Star-Defult.png' %}"/>-->
-<!--                                </div>-->
-
+                            <div>Rate (From 1 to 10(excellent))
+                                <input type="number" name="rating" min="1" max="10" required="true">
                             </div>
                         </div>
                         <button class="submit-button">
@@ -59,21 +47,17 @@
                     </form>
                 </div>
             </div>
+
             <div class="comments-frame">
                 <div class="text-wrapper-3">Comments</br></br>
                     {% for comment in comments %}
-                    {{ comment.body }}</br>
+                    {{ comment.body }}<br>
+                    {% empty %}
+                        <p>No comments yet.</p>
                     {% endfor %}
                 </div>
             </div>
-<!--            <div class="background"></div>-->
-<!--            <div class="big-button">-->
-<!--                <div class="text-wrapper-4">Next Chapter</div>-->
-<!--            </div>-->
-<!--            <div class="background-2"></div>-->
-<!--            <div class="div-wrapper">-->
-<!--                <div class="text-wrapper-4">Previous Chapter</div>-->
-<!--            </div>-->
+
             <div class="feedback-frame">
                 <div class="text-wrapper-5">Leave Feedback</div>
                 <p class="liked-what-you-read">
@@ -84,68 +68,45 @@
                     <img class="heart" src="{% static 'inkfluence/img/heart.png' %}"/>
                 </div>
             </div>
-<!--            <div class="chapter-frame">-->
-<!--                <p class="chapter-chapter">-->
-<!--                    Chapter 1<br/>Chapter 2<br/>Chapter 3<br/>Chapter 4<br/>Chapter 5<br/>Chapter 6<br/>Chapter 7<br/>Chapter-->
-<!--                    8<br/>Chapter 9<br/>Chapter 10-->
-<!--                </p>-->
-<!--                <div class="overlap-3">-->
-<!--                    <div class="text-wrapper-6">Chapters</div>-->
-<!--                    <img class="edit" src="{% static 'inkfluence/img/image.png' %}"/>-->
-<!--                </div>-->
-<!--            </div>-->
+
             <div class="story-info">
-                <div class="frame-wrapper">
-<!--                    <div class="frame-2">-->
-<!--                        <div class="star-wrapper"><img class="star-3"-->
-<!--                                                       src="{% static 'inkfluence/img/Star-Defult.png' %}"/></div>-->
-<!--                        <div class="star-wrapper"><img class="star-3"-->
-<!--                                                       src="{% static 'inkfluence/img/Star-Defult.png' %}"/></div>-->
-<!--                        <div class="star-wrapper"><img class="star-3"-->
-<!--                                                       src="{% static 'inkfluence/img/Star-Defult.png' %}"/></div>-->
-<!--                        <div class="star-wrapper"><img class="star-3"-->
-<!--                                                       src="{% static 'inkfluence/img/Star-Defult.png' %}"/></div>-->
-<!--                        <div class="star-wrapper"><img class="star-3"-->
-<!--                                                       src="{% static 'inkfluence/img/Star-Defult.png' %}"/></div>-->
-<!--                    </div>-->
-                </div>
-                <div class="text-wrapper-7">Rating: {{ rate_avg }}</div>
+                <div class="text-wrapper-7">Rating:<br>{{ story.rating|default:"NONE" }}</div>
                 <div class="overlap-4">
-                    <div class="text-wrapper-10"><a href="/inkfluence/profile/">{{ profile.user.username }}</a></div>
+                    <div class="text-wrapper-10">
+                        <a href="{% url 'profile' %}">{{ author }}</a>
+                    </div>
                     <div class="text-wrapper-11">Author</div>
                     <img class="edit" src="{% static 'inkfluence/img/edit.png' %}"/>
                 </div>
             </div>
+
             <div class="story-frame">
                 <p class="story">
                     {{ content }}
                 </p>
-                <!--            <div class="title">And so it begins...</div>-->
                 <div class="title">{{ title }}</div>
-<!--                <div class="chapter">Chapter One</div>-->
-<!--                <button class="edit-button">-->
-<!--                    <div class="text-wrapper-12">Edit</div>-->
-<!--                </button>-->
             </div>
 
-
-          <div class="naviation-bar">
+            <div class="naviation-bar">
             <div class="links"><a href="/inkfluence/home/" div class="link">Home</a></div>
             <div class="link2"><a href="/inkfluence/search/" div class="link">Search</a></div>
             <div class="link3"><a href="/inkfluence/submit/" class="link">Submit</a></div>
             <div class="logo">INKFLUENCE</div>
-            <div class="overlap-5">
-              <div class="background-4"></div>
+            <div class="overlap-8">
+<!--              <div class="background"></div>-->
               <button id="logoutBtn" class="logout-button">
-                <a href="{% url 'logout' %}"><div class="text-wrapper-13">Logout</div></a>
-              </button>>
-              <div class="background-3"></div>
-              <button id="profBtn" class="profile-button"><div class="text-wrapper-13">Profile</div></button>
-
+                <a href="{% url 'logout' %}"><div class="text-wrapper-15">Logout</div></a>
+              </button>
+              <div class="overlap-5">
+                    <div class="background"></div>
+                    <button id="profBtn" class="profile-button">
+                        <div class="text-wrapper-13">Profile</div>
+                    </button>
+              </div>
             </div>
         </div>
     </div>
+    </div>
 </div>
-<script src="{% static 'inkfluence/js/navbar.js' %}"></script>
 </body>
 </html>
