@@ -5,6 +5,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect, get_object_or_404
 from django.shortcuts import render, redirect
 from . import forms
+from inkfluence.bing_search import run_query
 
 from .models import *
 from inkfluence.bing_search import run_query
@@ -143,11 +144,11 @@ def story_submission_view(request):
 
 
 @login_required
-def story_view(request):
-    title = request.GET.get("title", "")
+def story_view(request, story_name_slug):
+
     context = {}
 
-    story = Story.objects.filter(title=title).first()
+    story = Story.objects.get(slug=story_name_slug)
     if story:
         comments_objs = story.comments.all()
         comments = [{"body": obj.body, "rating": obj.rating} for obj in comments_objs]
@@ -174,6 +175,7 @@ def story_view(request):
         context = {"error": "The requested story does not exist."}
 
     return render(request, 'storyPage.html', context)
+
 
 @login_required
 def comment_view(request, story_title):

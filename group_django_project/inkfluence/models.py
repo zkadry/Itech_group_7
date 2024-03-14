@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from multiselectfield import MultiSelectField
 from PIL import Image
 from django.conf import settings
+from django.template.defaultfilters import slugify
 
 # Defines the list of possible genres as tuples. The right-hand options will be what appears in a drop-down
 # menu, and the left-hand options are shorthand strings which will be stored in the database.
@@ -25,7 +26,12 @@ RATINGS = ((0, 0),
            (2, 2),
            (3, 3),
            (4, 4),
-           (5, 5)
+           (5, 5),
+           (6, 6),
+           (7, 7),
+           (8, 8),
+           (9, 9),
+           (10, 10)
            )
 
 ROLE_CHOICES = (
@@ -37,8 +43,7 @@ class Profile(models.Model):
     # Associates a single profile with a single user.
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     role = models.CharField(max_length=10, choices=ROLE_CHOICES, default='reader')
-    # Holds a profile pic image and stores it in the project folder under files/profile_pics.
-    # We will need to add more backend logic to allow users to upload their own photos.
+    # Holds a profile pic image and stores it in the project folder under /profile_pics.
     profile_pic = models.ImageField(default='default.jpg', blank=True)
     def save(self, *args, **kwargs):
         super(Profile, self).save(*args, **kwargs)  # saving image first
@@ -81,13 +86,20 @@ class Story (models.Model):
     title = models.CharField(max_length=200)
     # This will hold the URL slug which users can use to access the story on the site. We can either let the author
     # choose the slug or perform Slugify logic to automatically create a slug based on the story title.
-    slug = models.SlugField()
+    slug = models.SlugField(unique=True)
     # This holds the date the story was created and will auto-fill the date the story was created.
     date = models.DateField(auto_now=True)
     # Holds the story author as a foreign key, allowing a many to one relationship (one author can write many stories).
     # On the Profile side, these are called 'stories' (the related_name variable), so calling Profile.stories will
     # return a list of all stories created by that profile.
     author = models.ForeignKey(Profile, related_name= 'stories' ,on_delete=models.CASCADE)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        super(Story, self).save(*args, **kwargs)
+
+    class Meta:
+        verbose_name_plural = 'stories'
 
     def __str__(self):
         return self.title
