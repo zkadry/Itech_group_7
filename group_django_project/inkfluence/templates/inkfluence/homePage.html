@@ -72,7 +72,7 @@
             </div>
             <div class="author">By {{ latest_stories.0.author.user.username }}</div>
             <div class="title">
-              <a href="{% url 'story' %}?story_name_slug={{ latest_stories.0.slug|urlencode }}">{{ latest_stories.0.slug }}</a>
+              <a href="{% url 'story' latest_stories.0.slug %}">{{ latest_stories.0.title }}</a>
             </div>
           </div>
           <div class="recently-released-3"></div>
@@ -84,7 +84,7 @@
               <div class="author-2">By {{ latest_stories.1.author.user.username }}</div>
             </div>
             <div class="title">
-              <a href="{% url 'story' %}?story_name_slug={{ latest_stories.1.slug|urlencode }}">{{ latest_stories.1.slug }}</a>
+              <a href="{% url 'story' latest_stories.1.slug %}">{{ latest_stories.1.title }}</a>
             </div>
           </div>
           <div class="recently-released-5"></div>
@@ -96,7 +96,7 @@
             </div>
             <div class="author">By {{ latest_stories.2.author.user.username }}</div>
             <div class="title">
-              <a href="{% url 'story' %}?title={{ latest_stories.2.title|urlencode }}">{{ latest_stories.2.title }}</a>
+              <a href="{% url 'story' latest_stories.2.slug %}">{{ latest_stories.2.title }}</a>
             </div>
           </div>
           <div class="recently-released-7">Recently Released</div>
@@ -119,7 +119,7 @@
               <div class="div-wrapper-2"><div class="text-wrapper-11">By {{ top_story.author.user.username }}</div></div>
             </div>
             <div class="text-wrapper-13">
-              <a href="{% url 'story' %}?title={{ top_story.title|urlencode }}">{{ top_story.title }}</a>
+              <a href="{% url 'story' top_story.slug %}">{{ top_story.title }}</a>
             </div>
           </div>
           <div class="most-popular-shadow-2">Most Popular</div>
