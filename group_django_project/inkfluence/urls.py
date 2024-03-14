@@ -12,8 +12,10 @@ urlpatterns = [
     path('search/', views.search_view, name='search'),
     path('submit/', views.submit_view, name='submit'),
     path('profile/', views.profile_view, name='profile'),
+    path('profile/edit/', views.edit_profile_view, name='edit_profile'),
 
     path('story_submission/', views.story_submission_view, name='story_submission'),
     path('story/', views.story_view, name='story'),
     path('comment/', views.comment_view, name='comment'),
 ]
+

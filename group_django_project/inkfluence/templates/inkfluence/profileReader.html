@@ -12,25 +12,13 @@
         <div class="overlap">
           <img class="ink-fluence" src="{% static 'inkfluence/img/inkFluence.png' %}" />
           <div class="frame"></div>
-          <div class="favourite-genres">
-            <div class="genres"><div class="genres-input">Genres</div></div>
-            <div class="text-wrapper">Favourite Genres</div>
-          </div>
-          <div class="favourite-works">
-            <div class="div">Favourite Stories</div>
-            <p class="dreaming-of-electric">
-              Dreaming of Electric Sheep<br />by Shaun Thorn<br /><br />Pride and Pedicures<br />by Janet Austen<br /><br />And
-              So It Begins<br />by Jane Doe
-            </p>
-          </div>
-          <div class="profile-picture"></div>
           <div class="about">
-            <textarea class="bio-wrapper" placeholder="Bio" type="text"></textarea>
-            <div class="text-wrapper-2">Bio</div>
-            <div class="name-wrapper"><input class="input" placeholder="Name" type="text" /></div>
-            <div class="text-wrapper-3">Name</div>
-            <button class="edit-button"><div class="text-wrapper-5">Edit</div></button>
+            <div class="text-wrapper-3">Name</div><div class="text-wrapper-8"> {{ name }}</div> <div class="text-wrapper-4">Bio</div> <div class="text-wrapper-9"> {{ bio }}</div>
           </div>
+          <div class="profile-picture">
+            <img src = "{{ user.profile.profile_pic.url }}"/>
+          </div>
+          <button id="edtBtn" class="edit-button"><div class="text-wrapper-6">Edit</div></button>
           <div class="naviation-bar">
             <div class="links"><a href="/inkfluence/home/" div class="link">Home</a></div>
             <div class="link2"><a href="/inkfluence/search/" div class="link">Search</a></div>
@@ -39,15 +27,15 @@
             <div class="overlap-group">
               <div class="background"></div>
               <button id="logoutBtn" class="logout-button">
-                <a href="{% url 'logout' %}"><div class="text-wrapper-4">Logout</div></a>
+                <a href="{% url 'logout' %}"><div class="text-wrapper-7">Logout</div></a>
               </button>
               <div class="background-3"></div>
-              <button id="profBtn" class="profile-button"><div class="text-wrapper-4">Profile</div></button>
+              <button id="profBtn" class="profile-button"><div class="text-wrapper-7">Profile</div></button>
             </div>
           </div>
         </div>
       </div>
-        </div>
-    <script src="{% static 'inkfluence/js/navbar.js' %}"></script>
+    </div>
+    <script src="{% static 'inkfluence/js/button.js' %}"></script>
   </body>
 </html>
