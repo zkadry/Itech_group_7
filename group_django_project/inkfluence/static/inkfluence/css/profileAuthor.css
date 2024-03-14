@@ -42,10 +42,10 @@
 
 .profile-author .written-works {
   position: absolute;
-  width: 361px;
-  height: 494px;
-  top: 454px;
-  left: 995px;
+  width: 550px;
+  height: 404px;
+  top: 570px;
+  left: 795px;
   background-color: #ffffff;
   border-radius: 20px;
   overflow: hidden;
@@ -60,71 +60,17 @@
   left: 33px;
   font-family: "Roboto-ExtraBold", Helvetica;
   font-weight: 800;
-  color: #000000;
+  color: #b19ba8;
   font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.profile-author .div {
-  position: absolute;
-  width: 296px;
-  top: 57px;
-  left: 33px;
-  font-family: "Roboto-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 17.9px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.profile-author .favourite-stories {
-  position: absolute;
-  width: 349px;
-  height: 281px;
-  top: 668px;
-  left: 572px;
-  background-color: #ffffff;
-  border-radius: 20px;
-  overflow: hidden;
-  border: 1px solid;
-  border-color: #0000001a;
-}
-
-.profile-author .text-wrapper-2 {
-  position: absolute;
-  width: 196px;
-  top: 18px;
-  left: 77px;
-  font-family: "Roboto-ExtraBold", Helvetica;
-  font-weight: 800;
-  color: #000000;
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.profile-author .dreaming-of-electric {
-  position: absolute;
-  width: 295px;
-  top: 62px;
-  left: 25px;
-  font-family: "Roboto-ExtraBold", Helvetica;
-  font-weight: 800;
-  color: #000000;
-  font-size: 20px;
-  text-align: center;
   letter-spacing: 0;
   line-height: normal;
 }
 
 .profile-author .about {
   position: absolute;
-  width: 361px;
-  height: 494px;
-  top: 454px;
+  width: 550px;
+  height: 404px;
+  top: 570px;
   left: 146px;
   background-color: #ffffff;
   border-radius: 20px;
@@ -133,31 +79,36 @@
   border-color: #0000001a;
 }
 
-.profile-author .search {
-  display: flex;
-  width: 270px;
-  height: 311px;
-  align-items: center;
+.profile-author .text-wrapper-3 {
   position: absolute;
-  top: 167px;
+  top: 30px;
   left: 33px;
+  font-family: "Roboto-ExtraBold", Helvetica;
+  font-weight: 800;
+  color: #b19ba8;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
 }
 
-.profile-author .search-input {
-  position: relative;
-  width: 270px;
-  height: 303px;
-  font-family: "Poppins-Regular", Helvetica;
-  font-weight: 400;
-  color: var(--gray);
-  font-size: 18px;
+.profile-author .text-wrapper-4 {
+  position: absolute;
+  width: 74px;
+  top: 120px;
+  left: 33px;
+  font-family: "Roboto-ExtraBold", Helvetica;
+  font-weight: 800;
+  color: #b19ba8;
+  font-size: 20px;
   letter-spacing: 0;
   line-height: normal;
 }
 
-.profile-author .text-wrapper-3 {
+.profile-author .text-wrapper-8 {
   position: absolute;
-  top: 122px;
+  width: 500px;
+  top: 70px;
   left: 33px;
   font-family: "Roboto-ExtraBold", Helvetica;
   font-weight: 800;
@@ -165,30 +116,12 @@
   font-size: 20px;
   letter-spacing: 0;
   line-height: normal;
-  white-space: nowrap;
 }
 
-.profile-author .search-input-wrapper {
-  width: 270px;
-  height: 46px;
+.profile-author .text-wrapper-9 {
   position: absolute;
-  top: 56px;
-  left: 33px;
-  border: none;
-  background: none;
-  font-family: "Poppins-Regular", Helvetica;
-  font-weight: 400;
-  color: var(--gray);
-  font-size: 18px;
-  letter-spacing: 0;
-  line-height: normal;
-  padding: 0;
-}
-
-.profile-author .text-wrapper-4 {
-  position: absolute;
-  width: 74px;
-  top: 23px;
+  width: 500px;
+  top: 160px;
   left: 33px;
   font-family: "Roboto-ExtraBold", Helvetica;
   font-weight: 800;
@@ -208,49 +141,6 @@
   border-radius: 30px;
   border: 3px solid;
   border-color: #b19ba8;
-}
-
-.profile-author .star-rating {
-  position: absolute;
-  width: 186px;
-  height: 36px;
-  top: 612px;
-  left: 653px;
-}
-
-.profile-author .frame-2 {
-  display: inline-flex;
-  align-items: flex-start;
-  position: relative;
-}
-
-.profile-author .star {
-  position: relative;
-  width: 37.26px;
-  height: 36.12px;
-}
-
-.profile-author .img {
-  position: absolute;
-  width: 32px;
-  height: 30px;
-  top: 2px;
-  left: 3px;
-}
-
-.profile-author .text-wrapper-5 {
-  position: absolute;
-  width: 246px;
-  top: 542px;
-  left: 623px;
-  font-family: "Roboto-SemiBold", Helvetica;
-  font-weight: 600;
-  color: #000000;
-  font-size: 30px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: 59.1px;
-  white-space: nowrap;
 }
 
 .profile-author .edit-button {
@@ -405,4 +295,19 @@
   text-align: center;
   letter-spacing: 0;
   line-height: 24.3px;
+}
+
+.profile-author .text-wrapper,
+.profile-author .text-wrapper-2,
+.profile-author .text-wrapper-3,
+.profile-author .text-wrapper-4,
+.profile-author .text-wrapper-5,
+.profile-author .text-wrapper-6,
+.profile-author .text-wrapper-7,
+.profile-author .text-wrapper-8,
+.profile-author .text-wrapper-9,
+.profile-author .text-wrapper-10 {
+  text-align: center;
+  left: 50%; /* Set left position to center align */
+  transform: translateX(-50%); /* Translate back half of the element's width to center it */
 }

@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from multiselectfield import MultiSelectField
+from PIL import Image
+from django.conf import settings
 
 # Defines the list of possible genres as tuples. The right-hand options will be what appears in a drop-down
 # menu, and the left-hand options are shorthand strings which will be stored in the database.
@@ -37,12 +39,22 @@ class Profile(models.Model):
     role = models.CharField(max_length=10, choices=ROLE_CHOICES, default='reader')
     # Holds a profile pic image and stores it in the project folder under files/profile_pics.
     # We will need to add more backend logic to allow users to upload their own photos.
-    profile_pic = models.ImageField(upload_to='group_django_project/files/profile_pics')
+    profile_pic = models.ImageField(default='default.jpg', blank=True)
+    def save(self, *args, **kwargs):
+        super(Profile, self).save(*args, **kwargs)  # saving image first
+
+        img = Image.open(self.profile_pic.path)  # Open image using self
+
+        if img.height > 300 or img.width > 300:
+            new_img = (300, 300)
+            img.thumbnail(new_img)
+            img.save(self.profile_pic.path)  # saving image at the same path
+
     # Short text bio for an author.
     bio = models.TextField(max_length=300)
     # Allows authors to select multiple genres they like - will be stored in the database
     # as a single string separated by commas e.g. ('FAN, SCF, ACT') etc.
-    genre_likes = MultiSelectField(choices=GENRES, max_choices=11, max_length=200)
+    genre_likes = MultiSelectField(choices=GENRES, max_choices=11, max_length=200, blank=True, null=True)
     # Calculates the author rating as an average of their story ratings. This will not appear
     # as a normal entry in the database but can be called as a normal field property
     # (e.g. Profile.author_rating) when we need to use it, and will be calculated when called,
@@ -76,6 +88,9 @@ class Story (models.Model):
     # On the Profile side, these are called 'stories' (the related_name variable), so calling Profile.stories will
     # return a list of all stories created by that profile.
     author = models.ForeignKey(Profile, related_name= 'stories' ,on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.title
 
 class Comment(models.Model):
     # Stores the data and time of a comment, and will autofill the date/time the comment was made.

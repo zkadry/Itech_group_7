@@ -2,6 +2,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import get_user_model
+from . import models
 
 from .models import *
 
@@ -31,3 +32,7 @@ class StoryForm(forms.ModelForm):
         self.fields['genre'].label = "Story Genre"
         self.fields['description'].label = "Brief Description"
         self.fields['content'].label = "Story Content"
+class ProfileForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = ['bio', 'profile_pic', 'genre_likes']
