@@ -156,19 +156,19 @@ def story_view(request):
         author_username = story.author.user.username  # 这里是正确的路径
 
         # 使用模型中定义的方法或属性获取平均评分
-        rate_avg = story.rating() if hasattr(story, 'rating') and callable(story.rating) else 'No ratings'
+        rate_avg = story.rating
 
         context = {
-        "title": story.title,
-        "content": story.content,
-        "genre": story.genre,
-        "description": story.description,
-        "date": story.date.strftime('%B %d, %Y'),  # Formatting date
-        "author": author_username,
-        "author_id": story.author.user.id,
-        "comments": comments,
-        "rate_avg": rate_avg,
-        "author_link": f"/profile/{author_username}/"
+            "title": story.title,
+            "content": story.content,
+            "genre": story.genre,
+            "description": story.description,
+            "date": story.date.strftime('%B %d, %Y'),  # Formatting date
+            "author": author_username,
+            "author_id": story.author.user.id,
+            "comments": comments,
+            "rating": rate_avg,
+            "author_link": f"/profile/{author_username}/"
         }
     else:
         context = {"error": "The requested story does not exist."}
