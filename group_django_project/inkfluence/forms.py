@@ -12,3 +12,22 @@ class SignUpForm(UserCreationForm):
     class Meta:
         model = get_user_model()
         fields = ('username', 'password', 'role')
+
+
+class StoryForm(forms.ModelForm):
+    class Meta:
+        model = Story
+        fields = ['title', 'genre', 'description', 'content']
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'form-control'}),
+            'genre': forms.Select(choices=GENRES, attrs={'class': 'form-control'}),
+            'description': forms.Textarea(attrs={'class': 'form-control', 'rows': 3}),
+            'content': forms.Textarea(attrs={'class': 'form-control', 'rows': 5}),
+        }
+
+    def __init__(self, *args, **kwargs):
+        super(StoryForm, self).__init__(*args, **kwargs)
+        self.fields['title'].label = "Story Title"
+        self.fields['genre'].label = "Story Genre"
+        self.fields['description'].label = "Brief Description"
+        self.fields['content'].label = "Story Content"
