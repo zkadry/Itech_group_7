@@ -1,3 +1,115 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8"/>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'inkfluence/css/styleguide.css' %}"/>
+    <link rel="stylesheet" href="{% static 'inkfluence/css/storyPage.css' %}"/>
+</head>
+<body>
+<div class="story-page">
+    <div class="overlap-wrapper">
+        <div class="overlap">
+            <img class="inkfluence" src="{% static 'inkfluence/img/inkFluence.png' %}"/>
+            <img class="img" src="{% static 'inkfluence/img/inkFluence.png' %}"/>
+            <img class="inkfluence-2" src="{% static 'inkfluence/img/inkFluence.png' %}"/>
+
+            {% for message in messages %}
+            <div class="alert {{ message.tags }}">
+                {{ message }}
+            </div>
+            {% endfor %}
+
+            <div class="comment-window">
+                <div class="overlap-group">
+                    <div class="shadow"></div>
+                    <div class="coment-frame"></div>
+                    <form method="post" action="{% url 'comment' story_title=title %}">
+                        {% csrf_token %}
+                        <p class="share-your-thought">Loved the story? Share your thoughts!</p>
+                        <div class="leave-a-comment">Leave a comment below</div>
+                        <div class="comment-frame">
+                            <textarea class="comment-input" placeholder="Leave a comment..."
+                                      required="true" name="comment"></textarea>
+                        </div>
+                        <img class="comment" src="{% static 'inkfluence/img/comment-2.png' %}"/>
+                        <img class="comment-2" src="{% static 'inkfluence/img/comment-2.png' %}"/>
+                        <img class="comment-3" src="{% static 'inkfluence/img/comment-3.png' %}"/>
+                        <img class="comment-4" src="{% static 'inkfluence/img/comment-3.png' %}"/>
+                        <div class="star-rating">
+                            <div>Rate (From 1 to 10(excellent))
+                                <input type="number" name="rating" min="1" max="10" required="true">
+                            </div>
+                        </div>
+                        <button class="submit-button">
+                            <div class="text-wrapper-2">Submit</div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="comments-frame">
+                <div class="text-wrapper-3">Comments</br></br>
+                    {% for comment in comments %}
+                    {{ comment.body }}<br>
+                    {% empty %}
+                        <p>No comments yet.</p>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="feedback-frame">
+                <div class="text-wrapper-5">Leave Feedback</div>
+                <p class="liked-what-you-read">
+                    Liked what you read?<br/><br/>Let the author know what you thought in the comment section below!
+                </p>
+                <div class="overlap-2">
+                    <p class="p">You can also add this story to your favourites!</p>
+                    <img class="heart" src="{% static 'inkfluence/img/heart.png' %}"/>
+                </div>
+            </div>
+
+            <div class="story-info">
+                <div class="text-wrapper-7">Rating:<br>{{ story.rating|default:"NONE" }}</div>
+                <div class="overlap-4">
+                    <div class="text-wrapper-10">
+                        <a href="{% url 'profile' %}">{{ author }}</a>
+                    </div>
+                    <div class="text-wrapper-11">Author</div>
+                    <img class="edit" src="{% static 'inkfluence/img/edit.png' %}"/>
+                </div>
+            </div>
+
+            <div class="story-frame">
+                <p class="story">
+                    {{ content }}
+                </p>
+                <div class="title">{{ title }}</div>
+            </div>
+
+            <div class="naviation-bar">
+            <div class="links"><a href="/inkfluence/home/" div class="link">Home</a></div>
+            <div class="link2"><a href="/inkfluence/search/" div class="link">Search</a></div>
+            <div class="link3"><a href="/inkfluence/submit/" class="link">Submit</a></div>
+            <div class="logo">INKFLUENCE</div>
+            <div class="overlap-5">
+                <div class="background-4"></div>
+              <button id="logoutBtn" class="logout-button">
+                <a href="{% url 'logout' %}"><div class="text-wrapper-13">Logout</div></a>
+              </button>
+                <div class="background-3"></div>
+                    <button id="profBtn" class="profile-button"><div class="text-wrapper-13">Profile</div>
+                    </button>
+              </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+</body>
+</html>
+=======
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
 <head>
