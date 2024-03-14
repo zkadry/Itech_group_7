@@ -95,7 +95,7 @@
   height: 190px;
   position: relative;
   top: 10px;
-  left: 40px;
+  left: 35px;
   border: none;
   background: none;
   font-family: "Poppins-Regular", Helvetica;
@@ -111,8 +111,8 @@
 .edit-profile .text-wrapper-5 {
   position: absolute;
   width: 339px;
-  top: 415px;
-  left: 203px;
+  top: -70px;
+  left: 85px;
   font-family: "Roboto-Regular", Helvetica;
   font-weight: 400;
   color: #00000080;
@@ -171,8 +171,8 @@
 .edit-profile .text-wrapper-7 {
   position: absolute;
   width: 339px;
-  top: 276px;
-  left: 203px;
+  top: -70px;
+  left: 35px;
   font-family: "Roboto-Regular", Helvetica;
   font-weight: 400;
   color: #00000080;
@@ -186,8 +186,8 @@
 .edit-profile .text-wrapper-10 {
   position: absolute;
   width: 339px;
-  top: 140px;
-  left: 203px;
+  top: -70px;
+  left: 35px;
   font-family: "Roboto-Regular", Helvetica;
   font-weight: 400;
   color: grey;

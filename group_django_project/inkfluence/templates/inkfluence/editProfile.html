@@ -13,20 +13,26 @@
           <div class="overlap-group">
             <div class="shadow"></div>
             <div class="edit-frame">
-              <form class="edit-profile-form" action="{% url 'edit_profile'%}" method = "post" enctype="multipart/form-data">
+              <form class="edit-profile-form" action="{% url 'edit_profile'%}" method ="post" enctype="multipart/form-data">
                 {% csrf_token %}
-                {{ form }}
+                <div class="bio-wrapper">
+                  <textarea name="bio" class="bio" placeholder="Bio" type="text"></textarea>
+                  <div class="text-wrapper-5">Bio</div>
+                </div>
+                <div class="name-wrapper">
+                  <input name="nasme" class="name" placeholder="Name" type="text" />
+                  <div class="text-wrapper-7">Name</div>
+                </div>
+                <div class="pic-wrapper-2">
+                  <input type="file" id="profilePicture" name="profilePicture" class="profile-pic"><br>
+                  <div class="text-wrapper-10">Profile Picture</div>
+                </div>
                 <button type="submit" class="update-button"><div class="text-wrapper-3">Update</div></button>
-                <div class="bio-wrapper"><textarea name="bio" class="bio" placeholder="Bio" type="text"></textarea></div>
-                <div class="text-wrapper-5">Bio</div>
-                <div class="name-wrapper"><input name="nasme" class="name" placeholder="Name" type="text" /></div>
-                <div class="text-wrapper-7">Name</div>
-                <div class="pic-wrapper-2"><input type="file" id="profilePicture" name="profilePicture" class="profile-pic"><br></div>
-                <div class="text-wrapper-10">Profile Picture</div>
-                <div class="label"><div class="text-wrapper">Edit Your Profile!</div></div></body>
+                <div class="label">
+                  <div class="text-wrapper">Edit Your Profile!</div>
+                </div>
               </form>
               <div class="overlap-2">
-
               </div>
             </div>
           </div>
